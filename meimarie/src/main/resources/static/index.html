@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>MeiMarie</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body ng-app="meimarie">
+
+<div class="container">
+    <h1>MeiMarie</h1>
+    <div ng-controller="meimarie">
+        <p ng-repeat="(isoLanguage, greeting) in greetings">{{isoLanguage}} - {{greeting}}</p>
+    </div>
+</div>
+<script src="js/angular.min.js"></script>
+<script src="js/meimarie.js"></script>
+</body>
+</html>
