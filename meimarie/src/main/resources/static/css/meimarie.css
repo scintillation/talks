@@ -1,0 +1,109 @@
+
+.transaction {
+    border-radius: 0.75em;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.date {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+span.cash {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+span.cash-expense {
+    color: #d11e1b;
+}
+
+span.cash-deposit {
+    color: #31bf20;
+}
+
+span.tag {
+    color: #737373;
+}
+
+input.transaction {
+    font-size: 2em;
+    height: 2.15em;
+
+}
+
+div.january {
+    background-color: #94cfd2;
+    border-color: rgba(148, 207, 210, 0.5);
+}
+
+div.february {
+    background-color: #86d28a;
+    border: rgba(134, 210, 138, 0.5);
+}
+
+div.march {
+    background-color: #62d24f;
+    border: rgba(98, 210, 79, 0.5);
+}
+
+.april {
+    border: 0.10em solid #fe8bff;
+    color: #fe8bff;
+    background-color: rgba(254, 139, 255, 0.25);
+}
+
+div.may {
+    border: 0.10em solid #fffa03;
+    color: #fffa03;
+    background-color: rgba(255, 250, 3, 0.5);
+}
+
+div.june {
+    background-color: #ffda00;
+    border: rgba(255, 218, 0, 0.5);
+}
+
+div.july {
+    background-color: #ffa700;
+    border: rgba(255, 167, 0, 0.5);
+}
+
+div.august {
+    background-color: #ff7600;
+    border: rgba(255, 118, 0, 0.51);
+}
+
+div.september {
+    background-color: #ff6332;
+    border: rgba(255, 99, 50, 0.5);
+}
+
+div.october {
+    background-color: #b10014;
+    border: rgba(177, 0, 20, 0.5);
+}
+
+div.november {
+    background-color: #b159b1;
+    border: rgba(177, 89, 177, 0.51);
+}
+
+div.december {
+    background-color: #7252b1;
+    border: rgba(114, 82, 177, 0.51);
+}
+
+.credit-card {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background: url(../svg/credit_card.svg);
+    background-size: 64px 64px;
+}
+
+.example-transaction {
+    font-weight: 200;
+    color: #b3b3b3;
+}

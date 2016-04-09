@@ -3,18 +3,50 @@
 <head>
     <title>MeiMarie</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meimarie.css" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="js/meimarie.js"></script>
 </head>
 
 
 <body ng-app="meimarie">
 
-<div class="container">
+<div class="container" ng-controller="index">
     <h1>MeiMarie</h1>
-    <div ng-controller="meimarie">
-        <p ng-repeat="(isoLanguage, greeting) in greetings">{{isoLanguage}} - {{greeting}}</p>
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <label for="transaction">Enter transaction</label>
+            <input type="text" class="form-control transaction" id="transaction"
+                   placeholder="7.4 -19,90 cash #essen #restaurant #linz"
+            ng-keyup="keyEvent($event)" ng-model="transaction">
+            <div class="example-transaction">Example: 10.4 -25,95 CC #groceries #food #living #diner</div>
+        </div>
     </div>
+
+
+    <br/>
+    <br/>
+    <br/>
+
+
+    <div class="row">
+
+        <div class="col-md-offset-2 col-md-6">
+            <div class="transaction april" ng-repeat="trans in transactions">
+                <span class="date">{{trans.date | date : 'MMM.d.'}}</span>&nbsp;
+                <span class="cash cash-expense">{{trans.amount | number : 2}}</span>
+                <span class="type">{{trans.type}}</span>
+                <span class="type credit-card"></span>
+                <span class="tag" ng-repeat="tag in trans.tags">{{tag}}&nbsp;</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <pre>{{transactions}}</pre>
+
 </div>
-<script src="js/angular.min.js"></script>
-<script src="js/meimarie.js"></script>
 </body>
 </html>
