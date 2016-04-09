@@ -1,4 +1,10 @@
 
+.vertical-center {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 .transaction {
     border-radius: 0.75em;
 }

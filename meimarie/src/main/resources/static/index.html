@@ -30,7 +30,7 @@
     <br/>
 
 
-    <div class="row">
+    <div class="row" ng-repeat="trans in transactions">
 
         <!--<div class="col-md-offset-2 col-md-6">-->
             <!--<div class="transaction april" ng-repeat="trans in transactions">-->
@@ -43,36 +43,41 @@
         <!--</div>-->
 
 
-        <div class="col-md-offset-1 col-md-5">
-            <div class="row transaction april" >
-                <div class="col-md-2 text-right">
+
+        <div class="col-md-offset-1 col-md-5" ng-if="even">
+            <div class="row transaction april">
+                <div class="col-md-2 text-right vertical-center">
                     <div class="date">24.</div>
                     <div class="date">Apr.</div>
-                </div>
-                <div class="col-md-3 cash cash-expense text-center">-24,95</div>
-                <div class="col-md-2"><span class="type credit-card"></span></div>
-                <div class="col-md-5">
+                </div><!--
+                --><div class="col-md-3 cash cash-expense text-center vertical-center">{{trans.amount | number : 2}}</div><!--
+                --><div class="col-md-2 vertical-center"><span class="type credit-card"></span></div><!--
+                --><div class="col-md-5 vertical-center">
                     <div class="tag">#groceries</div>
                     <div class="tag">#lidl</div>
                     <div class="tag">#dinner</div>
                 </div>
             </div>
         </div>
-        <div class="col-md-offset-1 col-md-5">
-            <div class="row transaction april" >
-                <div class="col-md-2 text-right">
+
+
+        <div class="col-md-offset-1 col-md-5" ng-if="$odd">
+            <div class="row transaction april">
+                <div class="col-md-2 text-right vertical-center">
                     <div class="date">24.</div>
                     <div class="date">Apr.</div>
-                </div>
-                <div class="col-md-3 cash cash-expense text-center center-block">-24,95</div>
-                <div class="col-md-2"><span class="type credit-card"></span></div>
-                <div class="col-md-5">
-                    <div class="tag">#groceries</div>
-                    <div class="tag">#lidl</div>
-                    <div class="tag">#dinner</div>
-                </div>
+                </div><!--
+                --><div class="col-md-3 cash cash-expense text-center vertical-center">{{trans.amount | number : 2}}</div><!--
+                --><div class="col-md-2 vertical-center"><span class="type credit-card"></span></div><!--
+                --><div class="col-md-5 vertical-center">
+                <div class="tag">#groceries</div>
+                <div class="tag">#lidl</div>
+                <div class="tag">#dinner</div>
+            </div>
             </div>
         </div>
+
+
 
     </div>
     <br/>
