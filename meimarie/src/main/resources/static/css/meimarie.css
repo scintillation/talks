@@ -1,4 +1,9 @@
 
+path {
+    background-color: red;
+    color: red;
+}
+
 .vertical-center {
     display: inline-block;
     vertical-align: middle;
@@ -6,6 +11,8 @@
 }
 
 .transaction {
+    margin-bottom: 1em;
+    margin-right: 1em;
     border-radius: 0.75em;
 }
 
@@ -40,72 +47,98 @@ input.transaction {
 }
 
 div.january {
-    background-color: #94cfd2;
-    border-color: rgba(148, 207, 210, 0.5);
+    border: 0.10em solid #94cfd2;
+    color: #94cfd2;
+    background-color: rgba(184, 241, 244, 0.2);
 }
 
 div.february {
-    background-color: #86d28a;
-    border: rgba(134, 210, 138, 0.5);
+    border: 0.10em solid #86d28a;
+    color: #86d28a;
+    background-color: rgba(134, 210, 138, 0.2);
 }
 
 div.march {
-    background-color: #62d24f;
-    border: rgba(98, 210, 79, 0.5);
+    border: 0.10em solid #62d24f;
+    color: #62d24f;
+    background-color: rgba(98, 210, 79, 0.2);
 }
 
 .april {
     border: 0.10em solid #fe8bff;
     color: #fe8bff;
-    background-color: rgba(254, 139, 255, 0.25);
+    background-color: rgba(254, 139, 255, 0.2);
 }
 
 div.may {
-    border: 0.10em solid #fffa03;
-    color: #fffa03;
-    background-color: rgba(255, 250, 3, 0.5);
+    border: 0.10em solid #ffce00;
+    color: #ffce00;
+    background-color: rgba(255, 250, 3, 0.2);
 }
 
 div.june {
-    background-color: #ffda00;
-    border: rgba(255, 218, 0, 0.5);
+    border: 0.10em solid #ffda00;
+    color: #ffda00;
+    background-color: rgba(255, 218, 0, 0.2);
 }
 
 div.july {
-    background-color: #ffa700;
-    border: rgba(255, 167, 0, 0.5);
+    border: 0.10em solid #ffa700;
+    color: #ffda00;
+    background-color:  rgba(255, 167, 0, 0.2);
 }
 
 div.august {
-    background-color: #ff7600;
-    border: rgba(255, 118, 0, 0.51);
+    border: 0.10em solid #ff7600;
+    color: #ff7600;
+    background-color:  rgba(255, 118, 0, 0.2);
 }
 
 div.september {
-    background-color: #ff6332;
-    border: rgba(255, 99, 50, 0.5);
+    border: 0.10em solid #ff6332;
+    color: #ff6332;
+    background-color: rgba(255, 99, 50, 0.2);
 }
 
 div.october {
-    background-color: #b10014;
-    border: rgba(177, 0, 20, 0.5);
+    border: 0.10em solid #b10014;
+    color: #b10014;
+    background-color: rgba(177, 0, 20, 0.2);
 }
 
 div.november {
-    background-color: #b159b1;
-    border: rgba(177, 89, 177, 0.51);
+    border: 0.10em solid #b159b1;
+    color: #b159b1;
+    background-color: rgba(177, 89, 177, 0.2);
 }
 
 div.december {
-    background-color: #7252b1;
-    border: rgba(114, 82, 177, 0.51);
+    border: 0.10em solid #7252b1;
+    color: #7252b1;
+    background-color: rgba(114, 82, 177, 0.2);
 }
 
-.credit-card {
+.icon-credit-card {
     display: inline-block;
     width: 48px;
     height: 48px;
     background: url(../svg/credit_card.svg);
+    background-size: 48px 48px;
+}
+
+.icon-wire-transfer {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../svg/wire_transfer.svg);
+    background-size: 48px 48px;
+}
+
+.icon-cash {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../svg/cash.svg);
     background-size: 48px 48px;
 }
 

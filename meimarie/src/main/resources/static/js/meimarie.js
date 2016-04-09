@@ -20,6 +20,15 @@ angular.module('meimarie', [])
           }
         };
 
+        $scope.getTransactionCss = function(type) {
+            var css = { CA: 'icon-cash', CC: 'icon-credit-card', WT: 'icon-wire-transfer' }
+            return css[type];
+        };
+
+        $scope.getAmountCss = function(amount) {
+            return amount < 0 ? 'cash-expense' : 'cash-deposit';
+        };
+
         $http.get("/api/transaction").then(function(resp) {
             $scope.transactions = resp.data;
         }, function(resp) {

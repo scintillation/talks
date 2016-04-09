@@ -30,61 +30,27 @@
     <br/>
 
 
-    <div class="row" ng-repeat="trans in transactions">
 
-        <!--<div class="col-md-offset-2 col-md-6">-->
-            <!--<div class="transaction april" ng-repeat="trans in transactions">-->
-                <!--<span class="date">{{trans.date | date : 'MMM.d.'}}</span>&nbsp;-->
-                <!--<span class="cash cash-expense">{{trans.amount | number : 2}}</span>-->
-                <!--<span class="type">{{trans.type}}</span>-->
-                <!--<span class="type credit-card"></span>-->
-                <!--<span class="tag" ng-repeat="tag in trans.tags">{{tag}}&nbsp;</span>-->
-            <!--</div>-->
-        <!--</div>-->
-
-
-
-        <div class="col-md-offset-1 col-md-5" ng-if="even">
-            <div class="row transaction april">
+        <div class="col-md-5 transaction {{trans.date | date: 'MMMM' | lowercase}}" ng-repeat="trans in transactions">
+            <div class="row">
                 <div class="col-md-2 text-right vertical-center">
-                    <div class="date">24.</div>
-                    <div class="date">Apr.</div>
+                    <div class="date">{{trans.date | date: 'dd.'}}</div>
+                    <div class="date">{{trans.date | date: 'MMM.'}}</div>
                 </div><!--
-                --><div class="col-md-3 cash cash-expense text-center vertical-center">{{trans.amount | number : 2}}</div><!--
-                --><div class="col-md-2 vertical-center"><span class="type credit-card"></span></div><!--
-                --><div class="col-md-5 vertical-center">
-                    <div class="tag">#groceries</div>
-                    <div class="tag">#lidl</div>
-                    <div class="tag">#dinner</div>
+                --><div class="col-md-4 cash {{getAmountCss(trans.amount)}} text-center vertical-center">{{trans.amount | number : 2}}</div><!--
+                --><div class="col-md-2 vertical-center"><span class="{{getTransactionCss(trans.transactionType)}}"></span></div><!--
+                --><div class="col-md-4 vertical-center">
+                <div class="tag" ng-repeat="tag in trans.tags | limitTo: 3">{{tag}}</div>
                 </div>
             </div>
         </div>
 
 
-        <div class="col-md-offset-1 col-md-5" ng-if="$odd">
-            <div class="row transaction april">
-                <div class="col-md-2 text-right vertical-center">
-                    <div class="date">24.</div>
-                    <div class="date">Apr.</div>
-                </div><!--
-                --><div class="col-md-3 cash cash-expense text-center vertical-center">{{trans.amount | number : 2}}</div><!--
-                --><div class="col-md-2 vertical-center"><span class="type credit-card"></span></div><!--
-                --><div class="col-md-5 vertical-center">
-                <div class="tag">#groceries</div>
-                <div class="tag">#lidl</div>
-                <div class="tag">#dinner</div>
-            </div>
-            </div>
-        </div>
-
-
-
-    </div>
     <br/>
     <br/>
     <br/>
 
-    <pre>{{transactions}}</pre>
+    <!--<pre>{{transactions}}</pre>-->
 
 </div>
 </body>
