@@ -32,18 +32,52 @@
 
     <div class="row">
 
-        <div class="col-md-offset-2 col-md-6">
-            <div class="transaction april" ng-repeat="trans in transactions">
-                <span class="date">{{trans.date | date : 'MMM.d.'}}</span>&nbsp;
-                <span class="cash cash-expense">{{trans.amount | number : 2}}</span>
-                <span class="type">{{trans.type}}</span>
-                <span class="type credit-card"></span>
-                <span class="tag" ng-repeat="tag in trans.tags">{{tag}}&nbsp;</span>
+        <!--<div class="col-md-offset-2 col-md-6">-->
+            <!--<div class="transaction april" ng-repeat="trans in transactions">-->
+                <!--<span class="date">{{trans.date | date : 'MMM.d.'}}</span>&nbsp;-->
+                <!--<span class="cash cash-expense">{{trans.amount | number : 2}}</span>-->
+                <!--<span class="type">{{trans.type}}</span>-->
+                <!--<span class="type credit-card"></span>-->
+                <!--<span class="tag" ng-repeat="tag in trans.tags">{{tag}}&nbsp;</span>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <div class="col-md-offset-1 col-md-5">
+            <div class="row transaction april" >
+                <div class="col-md-2 text-right">
+                    <div class="date">24.</div>
+                    <div class="date">Apr.</div>
+                </div>
+                <div class="col-md-3 cash cash-expense text-center">-24,95</div>
+                <div class="col-md-2"><span class="type credit-card"></span></div>
+                <div class="col-md-5">
+                    <div class="tag">#groceries</div>
+                    <div class="tag">#lidl</div>
+                    <div class="tag">#dinner</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-offset-1 col-md-5">
+            <div class="row transaction april" >
+                <div class="col-md-2 text-right">
+                    <div class="date">24.</div>
+                    <div class="date">Apr.</div>
+                </div>
+                <div class="col-md-3 cash cash-expense text-center center-block">-24,95</div>
+                <div class="col-md-2"><span class="type credit-card"></span></div>
+                <div class="col-md-5">
+                    <div class="tag">#groceries</div>
+                    <div class="tag">#lidl</div>
+                    <div class="tag">#dinner</div>
+                </div>
             </div>
         </div>
 
     </div>
-
+    <br/>
+    <br/>
+    <br/>
 
     <pre>{{transactions}}</pre>
 

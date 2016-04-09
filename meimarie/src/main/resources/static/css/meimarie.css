@@ -1,29 +1,29 @@
 
 .transaction {
     border-radius: 0.75em;
-    padding: 0.5em;
-    margin: 0.5em;
 }
 
 .date {
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: 700;
 }
 
-span.cash {
-    font-size: 1.5em;
+.cash {
+    font-size: 2.5em;
     font-weight: 700;
 }
 
-span.cash-expense {
+.cash-expense {
     color: #d11e1b;
 }
 
-span.cash-deposit {
+.cash-deposit {
     color: #31bf20;
 }
 
-span.tag {
+.tag {
+    font-size: 1.25em;
+    font-weight: 200;
     color: #737373;
 }
 
@@ -97,10 +97,10 @@ div.december {
 
 .credit-card {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     background: url(../svg/credit_card.svg);
-    background-size: 64px 64px;
+    background-size: 48px 48px;
 }
 
 .example-transaction {

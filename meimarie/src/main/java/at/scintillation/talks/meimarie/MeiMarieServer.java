@@ -1,5 +1,6 @@
 package at.scintillation.talks.meimarie;
 
+import at.scintillation.talks.meimarie.dto.Stats;
 import at.scintillation.talks.meimarie.dto.Transaction;
 import at.scintillation.talks.meimarie.dto.TransactionType;
 import org.slf4j.Logger;
@@ -27,8 +28,6 @@ public class MeiMarieServer {
     private static final Logger logger = LoggerFactory.getLogger(MeiMarieServer.class);
 
     public static void main(String[] args) {
-        logger.info("Launching pa-web.");
-
         new SpringApplicationBuilder()
                 .sources(MeiMarieServer.class)
                 .run(args);
@@ -60,6 +59,12 @@ public class MeiMarieServer {
     @ResponseStatus(HttpStatus.OK)
     public void add(@RequestBody Transaction dto) {
         logger.info(dto.toString());
+    }
+
+    @RequestMapping(path = "/stats", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Stats stats() {
+        return new Stats();
     }
 
 }

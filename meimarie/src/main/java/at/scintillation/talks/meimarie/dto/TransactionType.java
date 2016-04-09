@@ -15,8 +15,7 @@ public enum TransactionType {
 
     CREDIT_CARD("CC"),
     WIRE_TRANSFER("WT"),
-    CASH("CA"),
-    CASH_WITHDRAWL("CW");
+    CASH("CA");
 
     private String type;
 
@@ -35,7 +34,6 @@ public enum TransactionType {
         namesMap.put(CREDIT_CARD.getType(), CREDIT_CARD);
         namesMap.put(WIRE_TRANSFER.getType(), WIRE_TRANSFER);
         namesMap.put(CASH.getType(), CASH);
-        namesMap.put(CASH_WITHDRAWL.getType(), CASH_WITHDRAWL);
     }
 
     @JsonCreator
