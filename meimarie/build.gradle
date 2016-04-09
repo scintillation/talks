@@ -1,3 +1,4 @@
+//initial Spring Boot setup in order to not being required to specify version numbers for spring boot dependencies
 buildscript {
     ext {
         springBootVersion = '1.3.3.RELEASE'
@@ -7,27 +8,38 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.hidetake:gradle-ssh-plugin:2.0.0")
     }
 }
 
-group 'at.scintillation.talks.meimarie'
-version '1.0.0-SNAPSHOT'
-
-apply plugin: 'java'
-apply plugin: 'spring-boot'
-
-jar {
-    baseName = rootProject.name
-    version = '0.0.1-SNAPSHOT'
+//plugins - new definition (Gradle DSL)
+plugins {
+    id 'java'
+    id 'org.hidetake.ssh' version '2.0.0' //ssh connection
+    id 'nu.studer.credentials' version '1.0.1' //password encryption: gradle addCredentials --key meimarie --value mypassword
 }
 
+//plugins - old definition
+apply plugin: 'spring-boot'
+
+//jar file definition
+group 'at.scintillation.talks.meimarie'
+version '1.0.0-SNAPSHOT'
+jar {
+    baseName = project.name
+    version = project.version
+}
+
+// Java version compatibility
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+// global dependency location: https://search.maven.org/
 repositories {
     mavenCentral()
 }
 
+//dependencies
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
@@ -36,6 +48,29 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.9'
+//SSH remote host for Continuous Integration
+ssh.settings {
+    knownHosts = allowAnyHosts
 }
+
+remotes {
+    meiMarieHost {
+        host = '40.68.45.121'
+        user = 'meimarie'
+        password =  credentials.meimarie
+    }
+}
+
+task deploy << {
+    def fileName = '' + project.name + "-" + project.version + ".jar"
+    def command = 'nohup java -jar /home/meimarie/' + fileName + " &"
+    ssh.run {
+        session(remotes.meiMarieHost) {
+            remove '/home/meimarie/' + fileName
+            put from: 'build/libs/' + fileName, into: '/home/meimarie'
+            executeBackground command
+        }
+    }
+}
+
+
