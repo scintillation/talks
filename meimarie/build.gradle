@@ -47,6 +47,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
     compile('org.springframework.boot:spring-boot-devtools')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('com.jayway.jsonpath:json-path:2.2.0')
 }
 
 //SSH remote host for Continuous Integration

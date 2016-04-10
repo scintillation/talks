@@ -33,8 +33,12 @@ public class MeiMarieServer {
 
     private static final Logger logger = LoggerFactory.getLogger(MeiMarieServer.class);
 
-    @Autowired
     private TransactionRepository repo;
+
+    @Autowired
+    public MeiMarieServer(TransactionRepository repo) {
+        this.repo = repo;
+    }
 
     public static void main(String[] args) {
         new SpringApplicationBuilder()
