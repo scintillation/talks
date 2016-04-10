@@ -5,52 +5,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/meimarie.css" rel="stylesheet">
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
     <script src="js/meimarie.js"></script>
 </head>
 
 
 <body ng-app="meimarie">
 
-<div class="container" ng-controller="index">
-    <h1>MeiMarie</h1>
-
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <label for="transaction">Enter transaction</label>
-            <input type="text" class="form-control transaction" id="transaction"
-                   placeholder="7.4 -19,90 cash #essen #restaurant #linz"
-            ng-keyup="keyEvent($event)" ng-model="transaction">
-            <div class="example-transaction">Example: 10.4 -25,95 CC #groceries #food #living #diner</div>
-        </div>
-    </div>
-
-
-    <br/>
-    <br/>
-    <br/>
-
-
-
-        <div class="col-md-5 transaction {{trans.date | date: 'MMMM' | lowercase}}" ng-repeat="trans in transactions">
-            <div class="row">
-                <div class="col-md-2 text-right vertical-center">
-                    <div class="date">{{trans.date | date: 'dd.'}}</div>
-                    <div class="date">{{trans.date | date: 'MMM.'}}</div>
-                </div><!--
-                --><div class="col-md-4 cash {{getAmountCss(trans.amount)}} text-center vertical-center">{{trans.amount | number : 2}}</div><!--
-                --><div class="col-md-2 vertical-center"><span class="{{getTransactionCss(trans.transactionType)}}"></span></div><!--
-                --><div class="col-md-4 vertical-center">
-                <div class="tag" ng-repeat="tag in trans.tags | limitTo: 3">{{tag}}</div>
-                </div>
-            </div>
-        </div>
-
-
-    <br/>
-    <br/>
-    <br/>
-
-    <!--<pre>{{transactions}}</pre>-->
+<div ng-view></div>
 
 </div>
 </body>

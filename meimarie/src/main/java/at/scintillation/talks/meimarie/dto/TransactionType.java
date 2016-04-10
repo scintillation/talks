@@ -13,8 +13,8 @@ import java.util.Map.Entry;
  */
 public enum TransactionType {
 
-    CREDIT_CARD("CC"),
     WIRE_TRANSFER("WT"),
+    CREDIT_CARD("CC"),
     CASH("CA");
 
     private String type;

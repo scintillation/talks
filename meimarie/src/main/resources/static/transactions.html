@@ -1,0 +1,50 @@
+
+
+
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">MeiMarie</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home"></i> Transactions</a></li>
+                <li><a href="#stats"><i class="fa fa-shield"></i> Statistics</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container" ng-controller="transactionController">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <label for="transaction">Enter transaction</label>
+            <input type="text" class="form-control transaction" id="transaction"
+                   placeholder="7.4 -19,90 ca #essen #restaurant #linz"
+            ng-keyup="keyEvent($event)" ng-model="transaction">
+            <div class="example-transaction">Example: 10.4 -25,95 cc #groceries #food #living #diner</div>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <div class="col-md-12 transaction {{trans.date | date: 'MMMM' | lowercase}}" ng-repeat="trans in transactions">
+        <div class="row">
+            <div class="col-md-2 text-left vertical-center"><!--
+                --><span class="date">{{trans.date | date: 'MMM.'}}</span><span class="date"> {{trans.date | date: 'dd.'}}</span><!--
+            --></div><!--
+            --><div class="col-md-2 cash {{getAmountCss(trans.amount)}} text-right vertical-center">{{trans.amount | number : 2}}</div><!--
+            --><div class="col-md-1 vertical-center text-center"><span class="{{getTransactionCss(trans.transactionType)}}"></span></div><!--
+            --><div class="col-md-4 vertical-center text-left"><!--
+            --><span class="tag" ng-repeat="tag in trans.tags | limitTo: 3"> {{tag}}</span><!--
+            --></div><!--
+        --></div><!--
+    --></div>
+    <br/>
+    <br/>
+    <br/>
+
+    <!--<pre>{{transactions}}</pre>-->
+
+</div>

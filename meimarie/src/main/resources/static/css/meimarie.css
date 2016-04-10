@@ -47,99 +47,99 @@ input.transaction {
 }
 
 div.january {
-    border: 0.10em solid #94cfd2;
-    color: #94cfd2;
-    background-color: rgba(184, 241, 244, 0.2);
+    border: 0.10em solid #0025d2;
+    color: #0025d2;
+    background-color: rgba(0, 37, 210, 0.1);
 }
 
 div.february {
-    border: 0.10em solid #86d28a;
-    color: #86d28a;
-    background-color: rgba(134, 210, 138, 0.2);
+    border: 0.10em solid #00aea0;
+    color: #00aea0;
+    background-color: rgba(0, 174, 160, 0.1);
 }
 
 div.march {
     border: 0.10em solid #62d24f;
     color: #62d24f;
-    background-color: rgba(98, 210, 79, 0.2);
+    background-color: rgba(98, 210, 79, 0.1);
 }
 
 .april {
-    border: 0.10em solid #fe8bff;
-    color: #fe8bff;
-    background-color: rgba(254, 139, 255, 0.2);
+    border: 0.10em solid #b5e236;
+    color: #b5e236;
+    background-color: rgba(181, 226, 54, 0.1);
 }
 
 div.may {
-    border: 0.10em solid #ffce00;
-    color: #ffce00;
-    background-color: rgba(255, 250, 3, 0.2);
+    border: 0.10em solid #b9c800;
+    color: #b9c800;
+    background-color: rgba(185, 200, 0, 0.1);
 }
 
 div.june {
-    border: 0.10em solid #ffda00;
-    color: #ffda00;
-    background-color: rgba(255, 218, 0, 0.2);
+    border: 0.10em solid #edc900;
+    color: #edc900;
+    background-color: rgba(237, 201, 0, 0.1);
 }
 
 div.july {
     border: 0.10em solid #ffa700;
-    color: #ffda00;
-    background-color:  rgba(255, 167, 0, 0.2);
+    color: #ffa700;
+    background-color:  rgba(255, 167, 0, 0.1);
 }
 
 div.august {
     border: 0.10em solid #ff7600;
     color: #ff7600;
-    background-color:  rgba(255, 118, 0, 0.2);
+    background-color:  rgba(255, 118, 0, 0.1);
 }
 
 div.september {
-    border: 0.10em solid #ff6332;
-    color: #ff6332;
-    background-color: rgba(255, 99, 50, 0.2);
+    border: 0.10em solid #bd7530;
+    color: #bd7530;
+    background-color: rgba(189, 117, 48, 0.1);
 }
 
 div.october {
-    border: 0.10em solid #b10014;
-    color: #b10014;
-    background-color: rgba(177, 0, 20, 0.2);
+    border: 0.10em solid #9f0032;
+    color: #9f0032;
+    background-color: rgba(177, 0, 20, 0.1);
 }
 
 div.november {
     border: 0.10em solid #b159b1;
     color: #b159b1;
-    background-color: rgba(177, 89, 177, 0.2);
+    background-color: rgba(177, 89, 177, 0.1);
 }
 
 div.december {
     border: 0.10em solid #7252b1;
     color: #7252b1;
-    background-color: rgba(114, 82, 177, 0.2);
+    background-color: rgba(114, 82, 177, 0.1);
 }
 
 .icon-credit-card {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     background: url(../svg/credit_card.svg);
-    background-size: 48px 48px;
+    background-size: 32px 32px;
 }
 
 .icon-wire-transfer {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     background: url(../svg/wire_transfer.svg);
-    background-size: 48px 48px;
+    background-size: 32px 32px;
 }
 
 .icon-cash {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     background: url(../svg/cash.svg);
-    background-size: 48px 48px;
+    background-size: 32px 32px;
 }
 
 .example-transaction {
