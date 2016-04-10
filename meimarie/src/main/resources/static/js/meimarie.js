@@ -1,5 +1,5 @@
 //(function() {
-angular.module('meimarie', ['ngRoute'])
+angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate'])
     .config(function ($routeProvider) {
         $routeProvider.when('/transactions', {
             templateUrl: '../transactions.html',
@@ -30,6 +30,7 @@ angular.module('meimarie', ['ngRoute'])
         };
 
         $http.get("/api/transaction").then(function (resp) {
+            console.log("loading data...");
             $scope.transactions = resp.data.content;
         }, function (resp) {
             console.log("Failed to load transactions.");
