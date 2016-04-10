@@ -48,7 +48,8 @@ public class MeiMarieServerTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        ctrl = new MeiMarieServer(repo);
+        ctrl = new MeiMarieServer();
+        ctrl.setRepo(repo);
         this.mvc = MockMvcBuilders.standaloneSetup(ctrl).build();
     }
 

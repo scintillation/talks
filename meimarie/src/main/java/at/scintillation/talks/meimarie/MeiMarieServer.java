@@ -33,17 +33,17 @@ public class MeiMarieServer {
 
     private static final Logger logger = LoggerFactory.getLogger(MeiMarieServer.class);
 
-    private TransactionRepository repo;
-
     @Autowired
-    public MeiMarieServer(TransactionRepository repo) {
-        this.repo = repo;
-    }
+    private TransactionRepository repo;
 
     public static void main(String[] args) {
         new SpringApplicationBuilder()
                 .sources(MeiMarieServer.class)
                 .run(args);
+    }
+
+    public void setRepo(TransactionRepository repo) {
+        this.repo = repo;
     }
 
     @RequestMapping(path = "/transaction", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
