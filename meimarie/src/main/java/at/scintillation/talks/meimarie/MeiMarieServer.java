@@ -42,6 +42,10 @@ public class MeiMarieServer {
                 .run(args);
     }
 
+    public void setRepo(TransactionRepository repo) {
+        this.repo = repo;
+    }
+
     @RequestMapping(path = "/transaction", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public Iterable<Transaction> list() throws ParseException {
