@@ -11,5 +11,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface TransactionRepository extends ElasticsearchRepository<Transaction, String> {
+
     Iterable<Transaction> findAll(Sort sort);
+
+    Iterable<Transaction> findAllByTags(String tag);
+
 }
