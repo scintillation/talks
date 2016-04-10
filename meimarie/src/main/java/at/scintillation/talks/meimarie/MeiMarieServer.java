@@ -33,7 +33,6 @@ public class MeiMarieServer {
 
     private static final Logger logger = LoggerFactory.getLogger(MeiMarieServer.class);
 
-
     @Autowired
     private TransactionRepository repo;
 
@@ -41,14 +40,6 @@ public class MeiMarieServer {
         new SpringApplicationBuilder()
                 .sources(MeiMarieServer.class)
                 .run(args);
-    }
-
-    @RequestMapping(path = "/transaction/{uuid}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @ResponseBody
-    public Transaction get(@PathParam("uuid") UUID uuid) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-        return new Transaction(uuid.toString(), format.parse("12.04.2016"), -24.95,
-                TransactionType.CASH, Arrays.asList("#groceries", "merkur", "diner"));
     }
 
     @RequestMapping(path = "/transaction", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -60,7 +51,7 @@ public class MeiMarieServer {
     @RequestMapping(path = "/transaction", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public void add(@RequestBody Transaction dto) {
-        logger.info(dto.toString());
+        repo.save(dto);
     }
 
     @RequestMapping(path = "/stats", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
