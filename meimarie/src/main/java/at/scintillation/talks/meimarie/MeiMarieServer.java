@@ -37,7 +37,7 @@ public class MeiMarieServer {
     @ResponseBody
     public Transaction list(@PathParam("uuid") UUID uuid) throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-        return new Transaction(uuid, format.parse("12.04.2016"), -24.95,
+        return new Transaction(uuid.toString(), format.parse("12.04.2016"), -24.95,
                 TransactionType.CASH, Arrays.asList("#groceries", "merkur", "diner"));
     }
 
@@ -46,11 +46,11 @@ public class MeiMarieServer {
     public List<Transaction> list() throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         return  Arrays.asList(
-                new Transaction(UUID.randomUUID(), format.parse("12.04.2016"), -24.95,
+                new Transaction(UUID.randomUUID().toString(), format.parse("12.04.2016"), -24.95,
                         TransactionType.CASH, Arrays.asList("#groceries", "#merkur", "#diner")),
-                new Transaction(UUID.randomUUID(), format.parse("04.01.2016"), -4.95,
+                new Transaction(UUID.randomUUID().toString(), format.parse("04.01.2016"), -4.95,
                         TransactionType.CASH, Arrays.asList("#obi", "#lightbulb", "#livingroom")),
-                new Transaction(UUID.randomUUID(), format.parse("01.03.2016"), 100.00,
+                new Transaction(UUID.randomUUID().toString(), format.parse("01.03.2016"), 100.00,
                         TransactionType.CASH, Arrays.asList("#bday", "#present", "#grandparents"))
         );
     }

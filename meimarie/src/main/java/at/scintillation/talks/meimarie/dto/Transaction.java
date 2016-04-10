@@ -1,25 +1,40 @@
 package at.scintillation.talks.meimarie.dto;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldIndex;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * @author <a href="mailto:alexander.rosemann@scintillation.at">Alexander Rosemann</a>
  * @since 1.0.0
  */
+@Document(indexName = "meimarie", type = "transaction")
 public class Transaction {
 
-    private UUID id;
+    @Id
+    private String id;
+
+    @Field(type = FieldType.Date)
     private Date date;
+
+    @Field(type = FieldType.Double)
     private Double amount;
+
+    @Field(type = FieldType.String, index = FieldIndex.not_analyzed)
     private TransactionType transactionType;
+
+    @Field(type = FieldType.String, searchAnalyzer = "standard", indexAnalyzer = "standard")
     private List<String> tags;
 
     public Transaction() {
     }
 
-    public Transaction(UUID id, Date date, Double amount, TransactionType transactionType, List<String> tags) {
+    public Transaction(String id, Date date, Double amount, TransactionType transactionType, List<String> tags) {
         this.id = id;
         this.date = date;
         this.amount = amount;
@@ -27,11 +42,11 @@ public class Transaction {
         this.tags = tags;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
