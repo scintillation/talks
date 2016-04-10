@@ -21,7 +21,7 @@ angular.module('meimarie', ['ngRoute'])
         };
 
         $scope.getTransactionCss = function (type) {
-            var css = {CA: 'icon-cash', CC: 'icon-credit-card', WT: 'icon-wire-transfer'}
+            var css = {CA: 'icon-cash', CC: 'icon-credit-card', WT: 'icon-wire-transfer'};
             return css[type];
         };
 
@@ -30,7 +30,7 @@ angular.module('meimarie', ['ngRoute'])
         };
 
         $http.get("/api/transaction").then(function (resp) {
-            $scope.transactions = resp.data;
+            $scope.transactions = resp.data.content;
         }, function (resp) {
             console.log("Failed to load transactions.");
         });
