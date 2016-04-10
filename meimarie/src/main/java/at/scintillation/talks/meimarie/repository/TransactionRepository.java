@@ -14,4 +14,6 @@ public interface TransactionRepository extends ElasticsearchRepository<Transacti
 
     Iterable<Transaction> findAll(Sort sort);
 
+    Iterable<Transaction> findAllByTags(String tag);
+
 }
