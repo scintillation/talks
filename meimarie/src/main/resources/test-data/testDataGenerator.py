@@ -31,12 +31,12 @@ if __name__ == '__main__':
         currUuid = uuid.uuid4()
         date = random_date(startDate, endDate).strftime("%Y-%m-%d")
         transactionType = transactionTypes[random.randint(0, 2)]
-        amount = random.randint(-100, 200)
+        amount = random.randint(-250, 100)
         tagsList = list()
         if amount < 0:
             numTags = random.randint(1, 5)
             for i in range(0, numTags):
-                tagsList.append(tagsOut[random.randint(0, len(tagsOut) - 1)])
+                tagsList.append(tagsOut[random.randint(0, len(tagsOut)-1)])
         else:
             tagsList.append(tagsIn[random.randint(0, 2)])
         tags = '\", \"'.join(tagsList)
