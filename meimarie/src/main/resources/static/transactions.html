@@ -15,13 +15,16 @@
     </nav>
 </header>
 
-<div class="container" ng-controller="transactionController">
+<div class="container">
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
             <label for="transaction">Enter transaction</label>
-            <input type="text" class="form-control transaction" id="transaction"
+            <input type="text"
+                   class="form-control transaction"
+                   id="transaction"
                    placeholder="7.4 -19,90 ca #essen #restaurant #linz"
-            ng-keyup="keyEvent($event)" ng-model="transaction">
+                   ng-keyup="keyEvent($event)"
+                   ng-model="transaction">
             <div class="example-transaction">Example: 10.4 -25,95 cc #groceries #food #living #diner</div>
         </div>
     </div>
