@@ -27,6 +27,11 @@
 
         <div class="col-md-offset-1 col-md-5">
 
+            <a href="" ng-click="switchInterval('DAY')">day</a> |
+            <a href="" ng-click="switchInterval('WEEK')">week</a> |
+            <a href="" ng-click="switchInterval('MONTH')">month</a> |
+            <a href="" ng-click="switchInterval('YEAR')">year</a>
+
             <div ng-repeat="item in stats.sumsPerInterval">
                 {{item.interval}}: {{item.sum}}
             </div>
