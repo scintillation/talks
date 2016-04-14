@@ -1,198 +1,198 @@
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"fd164ab8-571f-43f0-bb1b-fa54828c1586", "tags":["#present"], "date": "2015-09-03",  "transactionType": "CA", "amount": 44}
+{ "id":"28536d3e-7c8f-49e3-922a-33620a541a96", "tags":["#withdrawal"], "date": "2015-03-01",  "transactionType": "CC", "amount": 11}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"22b6843c-7bb1-4176-b4c0-ae196bd1c189", "tags":["#withdrawal"], "date": "2015-02-22",  "transactionType": "WT", "amount": 175}
+{ "id":"59f62117-9d30-4b18-9a5a-ffa40051d6fb", "tags":["#climbing", "#cross fit", "#cross fit"], "date": "2015-08-12",  "transactionType": "CC", "amount": -233}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"071bf45e-4371-460f-8b72-6e72a6378b99", "tags":["#poker win"], "date": "2015-04-30",  "transactionType": "CA", "amount": 194}
+{ "id":"dd347430-5fba-428a-8013-6f87f5befd71", "tags":["#withdrawal"], "date": "2015-10-28",  "transactionType": "CC", "amount": 85}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"492d58a1-b7b2-45a1-b67e-6a8294d8eeba", "tags":["#phone", "#living", "#dinner", "#breakfast"], "date": "2015-03-03",  "transactionType": "CC", "amount": -33}
+{ "id":"a446bde0-2ef2-4800-8508-69b0e24f8cbf", "tags":["#climbing", "#food"], "date": "2015-09-30",  "transactionType": "CC", "amount": -32}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"329b85b4-ac36-4136-93fd-b0ebb1558869", "tags":["#present"], "date": "2015-05-28",  "transactionType": "WT", "amount": 100}
+{ "id":"39220d8a-84be-4aa8-8800-c3aecb5d1080", "tags":["#breakfast"], "date": "2015-12-09",  "transactionType": "CA", "amount": -99}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"e02f959d-47ee-44ae-a4f1-1c7b60eb08bb", "tags":["#misc", "#lidl", "#amazon", "#pub"], "date": "2015-04-09",  "transactionType": "CC", "amount": -94}
+{ "id":"5d29bdd6-8795-4bb4-97de-edb9b85feb8b", "tags":["#phone", "#food", "#cross fit"], "date": "2015-07-12",  "transactionType": "CC", "amount": -206}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"cafdd51d-4c25-4632-93d8-4d4cb589d468", "tags":["#rent", "#living", "#dinner", "#breakfast", "#gas"], "date": "2015-10-08",  "transactionType": "CA", "amount": -36}
+{ "id":"21c03f5b-5a0b-4587-bb52-7e00c6358f03", "tags":["#withdrawal"], "date": "2015-05-09",  "transactionType": "WT", "amount": 94}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"c81889ae-092c-49f9-b553-16f38ad69078", "tags":["#poker win"], "date": "2015-07-22",  "transactionType": "CC", "amount": 55}
+{ "id":"76068b06-d5e3-4c87-b9d0-68c5e031147d", "tags":["#present"], "date": "2015-10-11",  "transactionType": "CC", "amount": 77}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"4c72c694-31c9-4dcf-a42b-0a2e0afe1645", "tags":["#rent", "#lidl", "#petrol", "#tech stuff"], "date": "2015-03-08",  "transactionType": "WT", "amount": -9}
+{ "id":"25af7a4c-9b13-448a-8b89-2fde94ed16b7", "tags":["#clothes", "#tech stuff", "#breakfast", "#petrol", "#cross fit"], "date": "2015-10-18",  "transactionType": "CC", "amount": -205}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"580912c6-cd9f-4a1f-acd5-bb16a9f7529f", "tags":["#withdrawal"], "date": "2015-07-14",  "transactionType": "WT", "amount": 81}
+{ "id":"a5a842cb-b26a-43de-a64f-fe1070cb59a7", "tags":["#withdrawal"], "date": "2015-06-30",  "transactionType": "CA", "amount": 55}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"b3a698d1-0509-4dde-9591-574dae7d2ebe", "tags":["#poker win"], "date": "2015-03-12",  "transactionType": "CA", "amount": 111}
+{ "id":"030daffe-cb13-4e82-ad80-e731709496ff", "tags":["#vinyl"], "date": "2015-11-22",  "transactionType": "CA", "amount": -242}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"58730f54-1056-4f5e-b237-2e5018468549", "tags":["#withdrawal"], "date": "2015-02-12",  "transactionType": "WT", "amount": 39}
+{ "id":"2d2c8373-9278-4487-88ab-68067b3fb3e8", "tags":["#skiing"], "date": "2015-05-05",  "transactionType": "CA", "amount": -184}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"864709ae-7430-4b58-806d-1bccdeefa507", "tags":["#poker win"], "date": "2015-09-01",  "transactionType": "CC", "amount": 150}
+{ "id":"68c7acda-a7ed-4756-bef7-606fa6e6d844", "tags":["#food", "#climbing", "#rent", "#shopping", "#amazon"], "date": "2015-07-24",  "transactionType": "CA", "amount": -161}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"268a7df7-2612-48f6-b42f-a129abbd9003", "tags":["#lidl", "#lidl", "#food", "#lidl", "#petrol"], "date": "2015-05-22",  "transactionType": "CC", "amount": -87}
+{ "id":"4b99f444-6a6d-40c9-a192-494a5ba98ef1", "tags":["#rent", "#phone"], "date": "2015-08-09",  "transactionType": "WT", "amount": -202}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"8ab1c4a7-5dfb-4529-88c7-1a4f6908c703", "tags":["#withdrawal"], "date": "2015-07-16",  "transactionType": "CA", "amount": 18}
+{ "id":"336a8115-ce68-4ceb-b6f8-fefc6a9e55a3", "tags":["#tech stuff"], "date": "2015-09-24",  "transactionType": "CA", "amount": -231}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"8ca7886d-741f-4923-b5dd-412f4b703366", "tags":["#withdrawal"], "date": "2015-09-14",  "transactionType": "CA", "amount": 58}
+{ "id":"6045720a-b3da-4077-a273-b5e9947f49a5", "tags":["#books"], "date": "2015-08-15",  "transactionType": "CC", "amount": -57}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"cb77588f-e9a6-404d-a182-0040c846bed4", "tags":["#food", "#transport", "#misc", "#rent", "#tech stuff"], "date": "2015-11-17",  "transactionType": "CA", "amount": -66}
+{ "id":"ed2e8d64-af59-47a8-94d8-4eb99d5c4feb", "tags":["#food"], "date": "2015-11-18",  "transactionType": "WT", "amount": -25}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"e9a51aa0-b05e-4c5c-8a4d-fe497304724b", "tags":["#present"], "date": "2015-03-13",  "transactionType": "CA", "amount": 37}
+{ "id":"96b82636-d0ab-4b5b-a35e-83f444329445", "tags":["#amazon", "#�BB", "#clothes"], "date": "2015-12-14",  "transactionType": "CC", "amount": -20}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"2cc371b2-9c34-40f8-b0ea-d97a985ff64e", "tags":["#present"], "date": "2015-11-15",  "transactionType": "WT", "amount": 187}
+{ "id":"fa82c954-2655-45c1-81d9-0158e3254a0c", "tags":["#withdrawal"], "date": "2015-07-30",  "transactionType": "CA", "amount": 44}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"ae2a6776-1db7-4c91-94ad-02b1e7f303d5", "tags":["#living", "#phone", "#rent", "#living"], "date": "2015-09-21",  "transactionType": "WT", "amount": -29}
+{ "id":"eb3dd6db-2282-47f7-a298-fbe4c74d21ae", "tags":["#misc", "#petrol"], "date": "2015-01-29",  "transactionType": "CC", "amount": -177}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"b7dd5ce8-c766-4732-97f6-fbbd0563b421", "tags":["#living"], "date": "2015-09-25",  "transactionType": "WT", "amount": -58}
+{ "id":"52c23329-a80d-4f39-bf03-5c5712586838", "tags":["#withdrawal"], "date": "2015-09-24",  "transactionType": "CC", "amount": 9}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"5e0eab05-0915-4f1d-ab5d-d214c157ee0a", "tags":["#present"], "date": "2015-06-20",  "transactionType": "CC", "amount": 190}
+{ "id":"f05b24b3-b166-41ef-a759-4cf0472a596d", "tags":["#withdrawal"], "date": "2015-07-28",  "transactionType": "CC", "amount": 25}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"daa5a2ea-5828-4b39-bf98-463001df3e5d", "tags":["#withdrawal"], "date": "2015-09-03",  "transactionType": "CC", "amount": 61}
+{ "id":"448954f4-e071-4478-99a7-1179e976de84", "tags":["#skiing", "#misc"], "date": "2015-09-06",  "transactionType": "CA", "amount": -192}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"22c9aea1-decb-4f96-af68-80fd50570903", "tags":["#withdrawal"], "date": "2015-07-18",  "transactionType": "CA", "amount": 160}
+{ "id":"25c00292-b997-4ec5-a4d0-29fec27b94f7", "tags":["#vinyl", "#climbing", "#vinyl"], "date": "2015-03-25",  "transactionType": "WT", "amount": -179}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"60d72cbe-b419-4fcf-a5ad-6fc1a51db1f9", "tags":["#breakfast", "#transport", "#transport"], "date": "2015-02-22",  "transactionType": "CC", "amount": -65}
+{ "id":"4dc2ba5e-b282-4bcf-8cd3-d9a70f817cc6", "tags":["#amazon", "#tech stuff", "#transport", "#transport", "#climbing"], "date": "2015-05-15",  "transactionType": "CC", "amount": -201}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"7736310e-ac6c-43af-86d1-7b5f34de0c30", "tags":["#present"], "date": "2015-08-07",  "transactionType": "CA", "amount": 97}
+{ "id":"81199206-5fed-491e-8aad-34b4833845b7", "tags":["#amazon"], "date": "2015-08-03",  "transactionType": "CC", "amount": -248}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"c76fa506-5eb8-4716-855f-6790c1a1b350", "tags":["#gas", "#lidl", "#food", "#gas"], "date": "2015-06-03",  "transactionType": "WT", "amount": -62}
+{ "id":"98697998-e3e1-4e2b-b75c-d7700d7a9d85", "tags":["#withdrawal"], "date": "2015-11-24",  "transactionType": "CC", "amount": 75}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"5d959dcc-e250-411b-ac4e-efb6e7abb77d", "tags":["#withdrawal"], "date": "2015-04-18",  "transactionType": "WT", "amount": 160}
+{ "id":"8210d1c1-d864-4199-816a-e9abf10f9241", "tags":["#withdrawal"], "date": "2015-02-25",  "transactionType": "WT", "amount": 3}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"018df95f-acfc-4e8e-99cb-a2ebd8f6654b", "tags":["#food", "#tech stuff"], "date": "2015-05-16",  "transactionType": "WT", "amount": -81}
+{ "id":"1a52b575-bb9d-48ed-9ee4-1a5e6db9640a", "tags":["#lidl", "#living", "#tram"], "date": "2015-03-27",  "transactionType": "CC", "amount": -199}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"9f8cefa3-9ae8-46cc-bc79-6670bc3aa8af", "tags":["#poker win"], "date": "2015-03-11",  "transactionType": "CC", "amount": 182}
+{ "id":"cafd758a-8af6-45d1-8001-5a5f40c4a694", "tags":["#cross fit", "#phone", "#gas", "#tech stuff", "#skiing"], "date": "2015-03-23",  "transactionType": "CA", "amount": -205}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"dc404487-e32f-4493-8b43-5bacfe59ba5a", "tags":["#present"], "date": "2015-09-10",  "transactionType": "CC", "amount": 68}
+{ "id":"a8babf1e-78b2-4e7b-8a18-ef302578612d", "tags":["#tech stuff", "#skiing", "#petrol", "#misc"], "date": "2015-11-16",  "transactionType": "CC", "amount": -24}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"8466f29c-4de4-48b0-bb84-535bd842663a", "tags":["#present"], "date": "2015-04-15",  "transactionType": "CA", "amount": 71}
+{ "id":"b1ad509f-2591-4ae0-8db5-cf153af1708b", "tags":["#clothes", "#tech stuff", "#gas", "#�BB", "#living"], "date": "2015-05-03",  "transactionType": "CA", "amount": -156}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"1c49376d-7f75-466e-8e6c-e9d8bc10b3b4", "tags":["#poker win"], "date": "2015-11-14",  "transactionType": "WT", "amount": 135}
+{ "id":"52bfbda4-7f0e-4001-99b1-f2041d52fe4c", "tags":["#withdrawal"], "date": "2015-12-03",  "transactionType": "WT", "amount": 4}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"7cb6cf87-cca2-497a-91da-7f26a77dbd67", "tags":["#living", "#phone", "#rent", "#tech stuff"], "date": "2015-08-22",  "transactionType": "CC", "amount": -85}
+{ "id":"27ff53b7-36f3-4026-b296-340717bcf2fe", "tags":["#food"], "date": "2015-12-22",  "transactionType": "WT", "amount": -249}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"7ca82741-1056-41a7-b2ff-b0b08b1eac04", "tags":["#withdrawal"], "date": "2015-10-30",  "transactionType": "CC", "amount": 112}
+{ "id":"aced5c8e-d18c-450f-9934-7ede897a945f", "tags":["#misc", "#climbing", "#tech stuff"], "date": "2015-12-26",  "transactionType": "CA", "amount": -203}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"d526b37a-76b6-4eb8-bc85-6abfe97cd2e7", "tags":["#present"], "date": "2015-12-06",  "transactionType": "WT", "amount": 48}
+{ "id":"ea794280-ce7a-4f23-a5cd-e97ab5b02547", "tags":["#dinner"], "date": "2015-04-03",  "transactionType": "WT", "amount": -109}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"003d7905-4a36-4036-a150-df6f2fc6586e", "tags":["#withdrawal"], "date": "2015-07-30",  "transactionType": "CA", "amount": 123}
+{ "id":"f607ee8b-4868-4dfc-97b2-59c3900b6ebd", "tags":["#withdrawal"], "date": "2015-04-21",  "transactionType": "CC", "amount": 33}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"8b33edb6-962a-4ec6-b43a-a9d34a567136", "tags":["#rent", "#gas", "#breakfast"], "date": "2015-01-18",  "transactionType": "WT", "amount": -15}
+{ "id":"853c51e0-7b2e-4fb5-9dfb-dc936b121ba7", "tags":["#present"], "date": "2015-03-18",  "transactionType": "CA", "amount": 46}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"aa50d935-e970-41df-ac47-4d84046bbfc0", "tags":["#amazon", "#amazon"], "date": "2015-11-08",  "transactionType": "WT", "amount": -75}
+{ "id":"7d263460-1787-4b46-b277-bdd38f09bfa1", "tags":["#present"], "date": "2015-02-02",  "transactionType": "WT", "amount": 75}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"619ec206-e54c-4593-853c-aa294c233ef7", "tags":["#gas", "#rent", "#petrol"], "date": "2015-05-14",  "transactionType": "WT", "amount": -11}
+{ "id":"075a86b4-b40b-4c45-aca3-097322d83bb3", "tags":["#misc", "#gas", "#transport"], "date": "2015-08-31",  "transactionType": "CC", "amount": -233}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"83fb95e7-26d0-43aa-a320-a36d9c78d8f8", "tags":["#present"], "date": "2015-06-27",  "transactionType": "CA", "amount": 195}
+{ "id":"7ed57926-e6a5-48c7-90ea-84c77fae5f3d", "tags":["#present"], "date": "2015-07-05",  "transactionType": "CC", "amount": 47}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"12fde1db-7afe-4994-ba86-9a80833dbe04", "tags":["#poker win"], "date": "2015-06-28",  "transactionType": "CC", "amount": 188}
+{ "id":"64e4dee0-c72a-4321-8f17-9f80aac85cc8", "tags":["#present"], "date": "2015-09-28",  "transactionType": "WT", "amount": 43}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"9b83df55-c570-46b5-8213-4f42e5d899c3", "tags":["#poker win"], "date": "2015-12-16",  "transactionType": "CC", "amount": 42}
+{ "id":"672d3776-3962-428a-b15f-f8def35b1c72", "tags":["#breakfast", "#amazon"], "date": "2015-12-24",  "transactionType": "WT", "amount": -133}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"d0cb2fe2-939c-447a-b4f3-455bf4fe40e0", "tags":["#present"], "date": "2015-01-31",  "transactionType": "CA", "amount": 2}
+{ "id":"b0053a7a-d4da-4164-91ae-48b1460fbe33", "tags":["#food", "#shopping", "#transport", "#amazon", "#food"], "date": "2015-05-07",  "transactionType": "WT", "amount": -183}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"ac1e994a-62ec-4095-b6a1-842cf870de05", "tags":["#gas", "#breakfast", "#breakfast"], "date": "2015-11-05",  "transactionType": "WT", "amount": -19}
+{ "id":"17a7b031-eacc-42c6-9de9-60f2a931ad66", "tags":["#dinner"], "date": "2015-12-30",  "transactionType": "CA", "amount": -208}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"e7158841-bec2-40a7-8d47-136290902f0a", "tags":["#living"], "date": "2015-06-11",  "transactionType": "WT", "amount": -12}
+{ "id":"ff9351a0-da86-4545-b52b-daab7c04548c", "tags":["#present"], "date": "2015-03-29",  "transactionType": "WT", "amount": 12}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"e2f8210b-3970-4ea3-b165-f4a3b0362843", "tags":["#present"], "date": "2015-09-28",  "transactionType": "CA", "amount": 114}
+{ "id":"79591de5-435c-4f20-b7dd-7d8d5d8725d9", "tags":["#books", "#gas", "#dinner"], "date": "2015-02-06",  "transactionType": "CA", "amount": -233}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"5ac3f0db-bee3-4cd0-a74a-2304606cf095", "tags":["#present"], "date": "2015-02-05",  "transactionType": "CC", "amount": 107}
+{ "id":"be8be40d-ed76-42bd-a6ee-47c2ef6e9e69", "tags":["#petrol", "#rent"], "date": "2015-12-02",  "transactionType": "CA", "amount": -1}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"00c4c8ea-5f8d-4a6b-95f7-5577a114add6", "tags":["#withdrawal"], "date": "2015-02-13",  "transactionType": "CC", "amount": 66}
+{ "id":"f3052296-3c27-45cb-bf7c-15199e0a1df5", "tags":["#living", "#amazon", "#tech stuff", "#petrol"], "date": "2015-02-25",  "transactionType": "CC", "amount": -21}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"085b657c-be9c-427c-a88a-8af6c0552235", "tags":["#poker win"], "date": "2015-05-02",  "transactionType": "CA", "amount": 187}
+{ "id":"cbc2a674-ad99-4819-97cc-8a133f3728dd", "tags":["#withdrawal"], "date": "2015-12-15",  "transactionType": "CA", "amount": 85}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"1314205f-5c5c-44d1-8d7b-c55aa531802b", "tags":["#poker win"], "date": "2015-10-30",  "transactionType": "CC", "amount": 70}
+{ "id":"d3a3385c-3298-446d-885d-033d33bce5de", "tags":["#tram"], "date": "2015-09-15",  "transactionType": "CA", "amount": -125}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"7d31b6dc-2033-47ae-856e-089a2254884c", "tags":["#withdrawal"], "date": "2015-07-02",  "transactionType": "WT", "amount": 131}
+{ "id":"ad1547c2-d992-4912-8508-562ccc4862ff", "tags":["#amazon", "#transport", "#phone", "#tram"], "date": "2015-12-28",  "transactionType": "CA", "amount": -27}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"f372e944-fec7-4b31-aed1-606324e97cb3", "tags":["#poker win"], "date": "2015-10-16",  "transactionType": "WT", "amount": 51}
+{ "id":"6d7619b0-25b3-424c-8c07-17e176644dec", "tags":["#present"], "date": "2015-11-10",  "transactionType": "WT", "amount": 1}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"e13964f1-cb96-4b99-b4b7-a61c234f9db6", "tags":["#present"], "date": "2015-10-17",  "transactionType": "CA", "amount": 6}
+{ "id":"5a445614-b4d8-4ecc-a59f-a9e02da04215", "tags":["#clothes", "#food", "#phone", "#food", "#clothes"], "date": "2015-07-27",  "transactionType": "CA", "amount": -144}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"57ea5a60-b0e1-4bd8-a8a2-ef8b75e783d9", "tags":["#poker win"], "date": "2015-02-03",  "transactionType": "WT", "amount": 185}
+{ "id":"76979916-be46-439a-b297-2993dc816f97", "tags":["#petrol", "#breakfast"], "date": "2015-01-05",  "transactionType": "CA", "amount": -201}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"7607144e-4532-4a6e-bec3-2b123c23d551", "tags":["#poker win"], "date": "2015-02-14",  "transactionType": "CA", "amount": 48}
+{ "id":"d76bb929-25ae-4d16-bbd4-fa8cf833aece", "tags":["#present"], "date": "2015-03-04",  "transactionType": "WT", "amount": 70}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"90c8f625-f370-4e3b-8cbc-fe88f7d4bcc3", "tags":["#dinner"], "date": "2015-04-21",  "transactionType": "CC", "amount": -13}
+{ "id":"a0fae555-2f33-410e-b655-374617481a92", "tags":["#tram"], "date": "2015-09-19",  "transactionType": "CC", "amount": -232}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"3aa38e12-2e92-4395-9e14-11eb5623523b", "tags":["#tech stuff", "#petrol", "#dinner", "#lidl"], "date": "2015-11-19",  "transactionType": "CA", "amount": -7}
+{ "id":"80f88668-f3ca-4245-a295-026e469ced55", "tags":["#transport", "#climbing", "#skiing", "#vinyl"], "date": "2015-09-07",  "transactionType": "CA", "amount": -101}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"d51eb7bc-854d-4e1d-a259-3003c5816e6d", "tags":["#present"], "date": "2015-08-02",  "transactionType": "WT", "amount": 196}
+{ "id":"fdc7eca5-5d40-4589-901e-fff322e03ce6", "tags":["#living", "#misc"], "date": "2015-11-09",  "transactionType": "CC", "amount": -140}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"f3693c31-fd26-4090-a234-1438210b0596", "tags":["#withdrawal"], "date": "2015-12-20",  "transactionType": "CC", "amount": 133}
+{ "id":"4d81a5e7-7314-4845-afdd-c513515c98a9", "tags":["#present"], "date": "2015-02-23",  "transactionType": "CA", "amount": 76}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"9a07190d-88f0-4ba2-a118-0cd9ffa6658a", "tags":["#withdrawal"], "date": "2015-11-19",  "transactionType": "WT", "amount": 101}
+{ "id":"5cd35096-a42f-4cb9-8f7f-7a17f03d7a15", "tags":["#withdrawal"], "date": "2015-08-28",  "transactionType": "CA", "amount": 46}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"ce7d6025-1ae0-4682-a65a-3689893206ea", "tags":["#gas", "#amazon", "#petrol"], "date": "2015-10-21",  "transactionType": "CA", "amount": -15}
+{ "id":"0135c9d3-d0ae-4007-88eb-89fdb933ecc9", "tags":["#shopping", "#cross fit", "#transport", "#rent"], "date": "2015-12-15",  "transactionType": "CA", "amount": -34}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"1f17f5b1-6754-4a85-9921-03a318c33d26", "tags":["#pub"], "date": "2015-04-12",  "transactionType": "CA", "amount": -65}
+{ "id":"76c08e8b-daeb-4099-be86-ddf7b6c33411", "tags":["#present"], "date": "2015-04-09",  "transactionType": "CC", "amount": 75}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"b9f2ee43-4860-41d8-9520-3ea2dbc3ebb6", "tags":["#withdrawal"], "date": "2015-09-20",  "transactionType": "WT", "amount": 87}
+{ "id":"172a8243-0891-41f6-8ee7-584f0a3b0f64", "tags":["#withdrawal"], "date": "2015-03-07",  "transactionType": "CC", "amount": 57}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"1bc5e748-652a-4e31-9e05-c3492987e292", "tags":["#withdrawal"], "date": "2015-06-12",  "transactionType": "CA", "amount": 7}
+{ "id":"e3d0cb7d-67ad-4d66-abf6-3bad704662c0", "tags":["#skiing", "#living", "#dinner", "#amazon"], "date": "2015-08-11",  "transactionType": "CA", "amount": -214}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"7f76df3b-4bd8-4bdc-8237-0efc3136bbdb", "tags":["#poker win"], "date": "2015-10-14",  "transactionType": "CA", "amount": 79}
+{ "id":"56a20030-c7a3-4d3f-8de8-8a1fdbdb3d35", "tags":["#skiing"], "date": "2015-04-23",  "transactionType": "CC", "amount": -71}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"4f7462d3-9b52-4fbf-b7e1-becf84687993", "tags":["#poker win"], "date": "2015-08-24",  "transactionType": "WT", "amount": 117}
+{ "id":"a55406ee-9cf6-4457-aea8-00b98bcaec25", "tags":["#books", "#books"], "date": "2015-03-07",  "transactionType": "CC", "amount": -26}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"c70a8a59-7ced-4574-9898-5ced37458c65", "tags":["#pub", "#dinner", "#pub", "#petrol"], "date": "2015-06-01",  "transactionType": "CC", "amount": -37}
+{ "id":"31414184-1ca5-4b70-b49f-0c1e96767235", "tags":["#withdrawal"], "date": "2015-04-12",  "transactionType": "CA", "amount": 16}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"789dfa64-d146-4d3c-b8b5-2a05b80d2be8", "tags":["#gas", "#rent", "#rent"], "date": "2015-11-18",  "transactionType": "CA", "amount": -21}
+{ "id":"0a5edb63-d58c-432f-b8b0-fd152b41b9fc", "tags":["#breakfast", "#phone", "#�BB"], "date": "2015-08-08",  "transactionType": "CA", "amount": -212}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"9b128751-c4a0-4afc-8901-90ab9ad737ca", "tags":["#present"], "date": "2015-11-21",  "transactionType": "WT", "amount": 13}
+{ "id":"693f6932-5544-41e2-b59e-8fede8270066", "tags":["#tram", "#living"], "date": "2015-08-19",  "transactionType": "CC", "amount": -7}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"a093a39c-6a5f-4b34-8727-4d9716ffaf05", "tags":["#rent"], "date": "2015-03-05",  "transactionType": "CC", "amount": -46}
+{ "id":"bad898fa-11da-4538-a9b4-3807aba19664", "tags":["#petrol"], "date": "2015-01-22",  "transactionType": "CA", "amount": -237}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"4bfc4454-e186-44d4-b331-969c30db96ef", "tags":["#breakfast", "#breakfast", "#petrol"], "date": "2015-08-18",  "transactionType": "CA", "amount": -66}
+{ "id":"d8da3310-d4fd-49c3-9796-76f9240417f4", "tags":["#skiing"], "date": "2015-04-25",  "transactionType": "WT", "amount": -10}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"73e8441c-15ce-49d4-8fad-1e9083c82ab3", "tags":["#rent", "#pub"], "date": "2015-11-25",  "transactionType": "WT", "amount": -63}
+{ "id":"6eaf8e2f-0ae3-4adf-8437-7894b4ee9810", "tags":["#petrol", "#dinner"], "date": "2015-03-30",  "transactionType": "CA", "amount": -71}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"87cf1d0a-4aea-4f29-9733-631b352f6dfd", "tags":["#phone", "#misc", "#pub"], "date": "2015-03-31",  "transactionType": "WT", "amount": -34}
+{ "id":"cda4d8e2-98d3-4075-8627-f86315c9a8fd", "tags":["#withdrawal"], "date": "2015-09-08",  "transactionType": "WT", "amount": 92}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"01d3f02d-0002-45b0-abb5-c6a8c8d2cf99", "tags":["#poker win"], "date": "2015-05-13",  "transactionType": "CA", "amount": 47}
+{ "id":"fe5cfb45-7997-4e0d-b4ab-e55c7f865cff", "tags":["#food"], "date": "2015-05-15",  "transactionType": "WT", "amount": -247}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"32f8ea17-0c7e-4bd2-be42-845bde46b571", "tags":["#present"], "date": "2015-10-13",  "transactionType": "CA", "amount": 186}
+{ "id":"40c557c8-d9b5-4a24-928c-8bb1e2e3e912", "tags":["#pub", "#vinyl", "#pub", "#gas"], "date": "2015-02-03",  "transactionType": "CC", "amount": -151}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"6f303cc4-f235-4d60-ab0c-22cb6201ed0d", "tags":["#tech stuff"], "date": "2015-10-17",  "transactionType": "WT", "amount": -22}
+{ "id":"6a814221-6ade-4cb9-b77b-ce3055510d6a", "tags":["#skiing"], "date": "2015-04-18",  "transactionType": "CA", "amount": -173}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"a4b60ae0-7415-4e85-87d7-af55378d8feb", "tags":["#misc", "#gas"], "date": "2015-04-21",  "transactionType": "WT", "amount": -44}
+{ "id":"9636e1aa-c6a7-48d9-a11f-a5093435cb0f", "tags":["#present"], "date": "2015-02-01",  "transactionType": "CC", "amount": 29}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"b569f5e4-f72f-4223-82b0-2ab6ad21104c", "tags":["#withdrawal"], "date": "2015-03-11",  "transactionType": "WT", "amount": 29}
+{ "id":"f362a25b-1aa1-4d8e-9627-3f7cd18a23b2", "tags":["#withdrawal"], "date": "2015-08-07",  "transactionType": "CA", "amount": 36}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"75ba7a3a-158b-4fa9-8507-5cebc9d37155", "tags":["#withdrawal"], "date": "2015-05-29",  "transactionType": "WT", "amount": 96}
+{ "id":"b6b69db1-8909-4727-871a-95c0547085aa", "tags":["#climbing"], "date": "2015-09-15",  "transactionType": "CA", "amount": -249}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"f5379015-707f-4a62-9949-54e982fbfb2d", "tags":["#gas", "#breakfast"], "date": "2015-09-24",  "transactionType": "WT", "amount": -56}
+{ "id":"3abcf4db-803f-4920-95f1-85ba01fa7565", "tags":["#withdrawal"], "date": "2015-11-21",  "transactionType": "CC", "amount": 58}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"33980844-3bd8-4f38-8ec1-d53f06f3caff", "tags":["#present"], "date": "2015-09-30",  "transactionType": "CC", "amount": 186}
+{ "id":"cff5da85-f49a-485f-b68c-a76c5d48f1f8", "tags":["#withdrawal"], "date": "2015-08-16",  "transactionType": "WT", "amount": 2}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"56e5b5db-997b-4e59-8d98-9bd2127b1764", "tags":["#present"], "date": "2015-02-06",  "transactionType": "CC", "amount": 78}
+{ "id":"cb7aa024-2a72-4038-ac67-abb1bcbb0be5", "tags":["#present"], "date": "2015-08-12",  "transactionType": "CC", "amount": 39}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"5fc0f0cb-596d-4f16-b343-35f19e5fb434", "tags":["#withdrawal"], "date": "2015-05-18",  "transactionType": "CC", "amount": 102}
+{ "id":"f2c4134b-a010-4e18-8d41-c68d51683a48", "tags":["#vinyl", "#cross fit", "#shopping", "#clothes", "#cross fit"], "date": "2015-08-26",  "transactionType": "WT", "amount": -71}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"8df65f12-55a5-4df8-b099-73e5097d8db2", "tags":["#present"], "date": "2015-10-08",  "transactionType": "CA", "amount": 132}
+{ "id":"0b7a7222-5e40-4b5b-9f6e-1e5a824f81f7", "tags":["#pub", "#gas", "#breakfast", "#skiing"], "date": "2015-07-21",  "transactionType": "CC", "amount": -219}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"911ba4a8-e66f-4d9a-8669-ade97f47798d", "tags":["#breakfast", "#tech stuff"], "date": "2015-06-10",  "transactionType": "CC", "amount": -20}
+{ "id":"9ff72a77-0fa9-455b-b7d4-00f47e5ea0a9", "tags":["#shopping", "#transport", "#phone"], "date": "2015-12-22",  "transactionType": "CA", "amount": -146}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"b78f95e1-bb97-42ad-b6b3-c3f4300f7f1d", "tags":["#withdrawal"], "date": "2015-09-27",  "transactionType": "WT", "amount": 38}
+{ "id":"f71f83ef-5e71-4bd5-9254-da08ae9c2c81", "tags":["#present"], "date": "2015-08-14",  "transactionType": "WT", "amount": 53}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"d52e28be-ec18-4ca3-9818-85cecc5dcec8", "tags":["#present"], "date": "2015-12-15",  "transactionType": "CA", "amount": 37}
+{ "id":"961629b7-e91f-4afd-bd03-8efed4e3acd0", "tags":["#amazon"], "date": "2015-07-02",  "transactionType": "WT", "amount": -58}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"23064117-eff8-408b-95e8-e632f0bc6587", "tags":["#withdrawal"], "date": "2015-01-11",  "transactionType": "CA", "amount": 168}
+{ "id":"742fb960-e869-4cbb-8961-7de453f7bd3d", "tags":["#rent", "#petrol", "#dinner", "#�BB"], "date": "2015-07-23",  "transactionType": "CC", "amount": -158}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"1cf0f049-e254-4f83-95ee-8e1fd24b0548", "tags":["#living", "#tech stuff", "#rent", "#rent"], "date": "2015-11-26",  "transactionType": "WT", "amount": -88}
+{ "id":"94d0871e-03de-422c-91c5-72e6edf3b5c2", "tags":["#dinner", "#breakfast", "#petrol", "#cross fit", "#cross fit"], "date": "2015-04-01",  "transactionType": "CC", "amount": -109}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"096b3ca5-03eb-4028-b7d9-39ac9ffbf6a4", "tags":["#withdrawal"], "date": "2015-06-13",  "transactionType": "CC", "amount": 146}
+{ "id":"c34372c1-977a-4c93-878f-75b366f9a434", "tags":["#lidl", "#vinyl", "#tech stuff", "#phone", "#phone"], "date": "2015-10-14",  "transactionType": "CC", "amount": -11}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"bb2bc46a-1e97-450e-9157-3076186ac3e8", "tags":["#present"], "date": "2015-05-10",  "transactionType": "WT", "amount": 64}
+{ "id":"b0665074-684e-478e-9087-16b53290ea6a", "tags":["#dinner", "#rent", "#living", "#phone", "#rent"], "date": "2015-01-24",  "transactionType": "CC", "amount": -84}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"8de5b953-2473-458c-8cfd-f31a37232e45", "tags":["#withdrawal"], "date": "2015-11-14",  "transactionType": "WT", "amount": 76}
+{ "id":"42f3c382-00ab-47da-ad6c-fa62aaf0fcd8", "tags":["#food", "#skiing", "#amazon"], "date": "2015-04-28",  "transactionType": "CA", "amount": -197}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"a98c7bbb-c23b-4525-a642-3f2af7e0e9fb", "tags":["#poker win"], "date": "2015-10-29",  "transactionType": "CC", "amount": 164}
+{ "id":"d9fa5d0c-f5da-4ad2-9dab-573bf58152d5", "tags":["#breakfast", "#transport", "#books"], "date": "2015-04-02",  "transactionType": "CC", "amount": -150}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"4e35d4cd-bfe0-44a2-8625-93b0b6ad97c8", "tags":["#poker win"], "date": "2015-12-08",  "transactionType": "WT", "amount": 50}
+{ "id":"ce28671d-48cd-4783-a06a-d18fb9bedbdc", "tags":["#transport", "#shopping"], "date": "2015-03-06",  "transactionType": "CC", "amount": -128}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"1fff5209-e228-4b29-b953-9f6abc6756f8", "tags":["#transport", "#tech stuff", "#breakfast"], "date": "2015-01-02",  "transactionType": "CA", "amount": -36}
+{ "id":"8f2ca01c-4748-4291-8aa5-73924b148a6d", "tags":["#phone", "#climbing", "#clothes"], "date": "2015-06-25",  "transactionType": "CC", "amount": -60}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"d52ffb31-928e-48bc-af96-116234eb4c65", "tags":["#rent"], "date": "2015-12-02",  "transactionType": "CA", "amount": -48}
+{ "id":"6e235a3b-94c6-4599-8aa0-f20eda4bc63f", "tags":["#phone", "#lidl", "#rent"], "date": "2015-08-22",  "transactionType": "WT", "amount": -155}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"77f26eba-5436-4961-b327-87bf6daf6750", "tags":["#present"], "date": "2015-10-06",  "transactionType": "CC", "amount": 120}
+{ "id":"45a22a81-e0b0-4b20-8c9a-05a5ed6a2f63", "tags":["#present"], "date": "2015-05-04",  "transactionType": "CC", "amount": 41}
 {"index":{"_index":"meimarie", "_type":"transaction"}}
-{ "id":"029ed7ce-2c94-4dde-9f9e-9f81e196d6eb", "tags":["#poker win"], "date": "2015-03-12",  "transactionType": "CA", "amount": 43}
+{ "id":"c882e50d-9e52-4eca-86d2-967ac38f9121", "tags":["#cross fit", "#books"], "date": "2015-01-02",  "transactionType": "CA", "amount": -52}

@@ -17,8 +17,9 @@ def random_date(start, end):
 if __name__ == '__main__':
 
     tagsOut = ["#food", "#lidl", "#breakfast", "#misc", "#phone", "#amazon", "#tech stuff",
-               "#living", "#rent", "#gas", "#petrol", "#transport", "#pub", "#dinner"]
-    tagsIn = ["#present", "#withdrawal", "#poker win"]
+               "#living", "#rent", "#gas", "#petrol", "#transport", "#pub", "#dinner", "#clothes",
+               "#shopping", "#vinyl", "#books", "#cross fit", "#climbing", "#tram", "#ÖBB", "#skiing"]
+    tagsIn = ["#present", "#withdrawal"]
     transactionTypes = ["CA", "CC", "WT"]
 
     startDate = datetime.datetime.strptime('1/1/2015', '%d/%m/%Y')
@@ -38,7 +39,7 @@ if __name__ == '__main__':
             for i in range(0, numTags):
                 tagsList.append(tagsOut[random.randint(0, len(tagsOut)-1)])
         else:
-            tagsList.append(tagsIn[random.randint(0, 2)])
+            tagsList.append(tagsIn[random.randint(0, len(tagsIn)-1)])
         tags = '\", \"'.join(tagsList)
 
         secondLine = "{ \"id\":\"" + str(currUuid) + "\", \"tags\":[\"" + tags + "\"], \"date\": \"" + date \
