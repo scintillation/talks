@@ -26,7 +26,13 @@
         </div>
 
         <div class="col-md-offset-1 col-md-5">
-            more stats
+
+            <div ng-repeat="item in stats.sumsPerInterval">
+                {{item.interval}}: {{item.sum}}
+            </div>
+
+
+
         </div>
     </div>
 

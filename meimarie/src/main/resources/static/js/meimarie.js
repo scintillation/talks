@@ -76,7 +76,8 @@ angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate'])
         //    $scope.greetings = response.data;
         //});
 
-        $scope.stats = {descriptive: {}};
+        $scope.interval = "MONTH";
+        $scope.stats = {descriptive: {}, sumsPerInterval: []};
 
 
         $http.get("/api/stats/descriptive").then(function (resp) {
@@ -86,6 +87,16 @@ angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate'])
         }, function (resp) {
             console.log("Failed to load transactions.");
         });
+
+        $http.get("/api/stats/aggregation/sums_per_interval/" + $scope.interval).then(function (resp) {
+            console.log("loading data...");
+            $scope.stats.sumsPerInterval = resp.data;
+            console.log(JSON.stringify($scope.stats.sumsPerInterval));
+        }, function (resp) {
+            console.log("Failed to load transactions.");
+        });
+
+
 
 
 

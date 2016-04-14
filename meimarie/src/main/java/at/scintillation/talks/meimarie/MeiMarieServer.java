@@ -1,10 +1,14 @@
 package at.scintillation.talks.meimarie;
 
+import at.scintillation.talks.meimarie.dto.IntervalType;
 import at.scintillation.talks.meimarie.dto.Stats;
+import at.scintillation.talks.meimarie.dto.SumPerInterval;
 import at.scintillation.talks.meimarie.dto.Transaction;
 import at.scintillation.talks.meimarie.repository.TransactionRepository;
 import at.scintillation.talks.meimarie.repository.TransactionSearchService;
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
+import org.elasticsearch.search.aggregations.metrics.sum.InternalSum;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +24,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.text.ParseException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author <a href="mailto:alexander.rosemann@scintillation.at">Alexander Rosemann</a>
@@ -69,10 +75,16 @@ public class MeiMarieServer {
         return result;
     }
 
-    @RequestMapping(path = "/stats/aggregation/sums_per_interval/{{interval}}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(path = "/stats/aggregation/sums_per_interval/{interval}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public DateHistogram descriptive(@PathVariable DateHistogram.Interval interval) {
-        DateHistogram result = service.getTransactionSumsPerInterval(interval);
+    public List<SumPerInterval> sumPerInterval(@PathVariable IntervalType interval) {
+        final DateHistogram.Interval dateInterval = new DateHistogram.Interval(interval.getType());
+        DateHistogram histogram = service.getTransactionSumsPerInterval(dateInterval);
+        final List<SumPerInterval> result = histogram.getBuckets().stream().map(b -> {
+            InternalSum internalSum = (InternalSum) b.getAggregations().get("sum");
+            final org.elasticsearch.common.joda.time.DateTime date = b.getKeyAsDate();
+            return new SumPerInterval(date.getMillis(), internalSum.getValue());
+        }).collect(Collectors.toList());
         return result;
     }
 
