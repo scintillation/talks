@@ -75,6 +75,20 @@ angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate'])
         //$http.get('/api/stats', function (response) {
         //    $scope.greetings = response.data;
         //});
+
+        $scope.stats = {descriptive: {}};
+
+
+        $http.get("/api/stats/descriptive").then(function (resp) {
+            console.log("loading data...");
+            $scope.stats.descriptive = resp.data;
+            console.log(JSON.stringify($scope.stats.descriptive));
+        }, function (resp) {
+            console.log("Failed to load transactions.");
+        });
+
+
+
     }]);
 
 //})();

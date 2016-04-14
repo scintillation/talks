@@ -3,6 +3,8 @@ package at.scintillation.talks.meimarie;
 import at.scintillation.talks.meimarie.dto.Stats;
 import at.scintillation.talks.meimarie.dto.Transaction;
 import at.scintillation.talks.meimarie.repository.TransactionRepository;
+import at.scintillation.talks.meimarie.repository.TransactionSearchService;
+import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +12,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.elasticsearch.core.facet.result.StatisticalResult;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.text.ParseException;
 
 /**
@@ -32,6 +36,9 @@ public class MeiMarieServer {
 
     @Autowired
     private TransactionRepository repo;
+
+    @Autowired
+    private TransactionSearchService service;
 
     public static void main(String[] args) {
         new SpringApplicationBuilder()
@@ -55,10 +62,19 @@ public class MeiMarieServer {
         repo.save(dto);
     }
 
-    @RequestMapping(path = "/stats", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(path = "/stats/descriptive", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public Stats stats() {
-        return new Stats();
+    public StatisticalResult descriptive() {
+        StatisticalResult result = service.getAmountDescriptiveAnalysis();
+        return result;
     }
+
+    @RequestMapping(path = "/stats/aggregation/sums_per_interval/{{interval}}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public DateHistogram descriptive(@PathVariable DateHistogram.Interval interval) {
+        DateHistogram result = service.getTransactionSumsPerInterval(interval);
+        return result;
+    }
+
 
 }

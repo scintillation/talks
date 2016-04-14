@@ -100,17 +100,6 @@ public class TransactionSearchService {
         return (Range)aggregations.get(posOrNegName);
     }
 
-    public DateHistogram getTransactionSumsPerMonth() {
-        return getTransactionSumsPer(DateHistogram.Interval.MONTH);
-    }
-
-    public DateHistogram getTransactionSumsPerYear() {
-        return getTransactionSumsPer(DateHistogram.Interval.YEAR);
-    }
-
-    public DateHistogram getTransactionSumsPerDay() {
-        return getTransactionSumsPer(DateHistogram.Interval.DAY);
-    }
 
     /**
      * <pre>{
@@ -131,7 +120,8 @@ public class TransactionSearchService {
      }
      }</pre>
      */
-    private DateHistogram getTransactionSumsPer(DateHistogram.Interval interval) {
+    public DateHistogram getTransactionSumsPerInterval(DateHistogram.Interval interval) {
+
         String transPerMonth = "transactions_per_month";
         DateHistogramBuilder dateHistogramBuilder = AggregationBuilders.dateHistogram(transPerMonth)
                 .field("date")
@@ -145,7 +135,9 @@ public class TransactionSearchService {
 
         Aggregations aggregations = elasticsearchTemplate.query(searchQuery, SearchResponse::getAggregations);
         return (DateHistogram)aggregations.get(transPerMonth);
+
     }
+
 
     /**
      * <pre>{
