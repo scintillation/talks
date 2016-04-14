@@ -13,20 +13,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
-import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
-import org.springframework.data.elasticsearch.core.FacetedPage;
-import org.springframework.data.elasticsearch.core.facet.request.HistogramFacetRequestBuilder;
-import org.springframework.data.elasticsearch.core.facet.result.HistogramResult;
-import org.springframework.data.elasticsearch.core.facet.result.IntervalUnit;
-import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
-import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -43,8 +34,6 @@ public class TransactionRepositoryTest {
 
     @Autowired
     private ElasticsearchOperations operations;
-    @Autowired
-    private ElasticsearchTemplate elasticsearchTemplate;
     @Resource
     private TransactionRepository repo;
 
@@ -109,7 +98,7 @@ public class TransactionRepositoryTest {
     }
 
 
-    private void initRepo() {
+    protected static void addTransactionsToRepo(TransactionRepository repo) {
         Calendar c = new GregorianCalendar();
         c.set(113 + 1900, Calendar.OCTOBER, 31);
         Transaction t1 = new Transaction(UUID.randomUUID().toString(), c.getTime(), 13.21, TransactionType.CASH, Arrays.asList("#win", "#poker"));
@@ -127,39 +116,10 @@ public class TransactionRepositoryTest {
 
     @Test
     public void shouldFindByTags() {
-        initRepo();
+        TransactionRepositoryTest.addTransactionsToRepo(repo);
         assertThat(Iterators.size(repo.findAllByTags("alex").iterator()), is(3));
         assertThat(Iterators.size(repo.findAllByTags("post").iterator()), is(1));
         assertThat(Iterators.size(repo.findAllByTags("helpme").iterator()), is(0));
     }
-
-
-    @Test
-    public void shouldReturnFacetedYearsAndFacetedAuthorsForGivenQuery() {
-        initRepo();
-
-        String facetName = "histogram";
-        SearchQuery searchQuery = new NativeSearchQueryBuilder()
-                .withQuery(matchAllQuery())
-                .withFacet(new HistogramFacetRequestBuilder(facetName).field("date").interval(365).timeUnit(TimeUnit.DAYS).build())
-                .build();
-        FacetedPage<Transaction> result = elasticsearchTemplate.queryForPage(searchQuery, Transaction.class);
-        assertThat(result.getNumberOfElements(), is(equalTo(7)));
-
-        //num facets
-        HistogramResult years = (HistogramResult) result.getFacet(facetName);
-        assertThat(years.getIntervalUnit().size(), is(equalTo(2)));
-
-        //elements in facet 1:
-        IntervalUnit unit = years.getIntervalUnit().get(0);
-        assertThat(unit.getKey(), is(1356048000000L));
-        assertThat(unit.getCount(), is(3L));
-
-        unit = years.getIntervalUnit().get(1);
-        assertThat(unit.getKey(), is(1419120000000L));
-        assertThat(unit.getCount(), is(4L));
-
-    }
-
 
 }
