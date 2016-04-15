@@ -26,10 +26,8 @@
             <a href="" ng-click="switchInterval('MONTH')">month</a> |
             <a href="" ng-click="switchInterval('YEAR')">year</a>
 
-            <div ng-repeat="item in stats.sumsPerInterval">
-                {{item.interval}}: {{item.sum}}
-            </div>
-
+            <canvas id="bar" class="chart chart-bar" chart-data="chartData" chart-labels="chartLabels"
+                    chart-series="chartSeries" chart-options="chartOptions"></canvas>
         </div>
     </div>
 
@@ -39,8 +37,8 @@
             <table class="table">
                 <tr>
                     <th>Number of transactions</th>
-                    <th>Minimum (highest spending)</th>
-                    <th>Maximum (highest withdrawal)</th>
+                    <th>Minimum<br/>(highest spending)</th>
+                    <th>Maximum<br/>(highest withdrawal)</th>
                     <th>Mean</th>
                     <th>Overall sum</th>
                 </tr>

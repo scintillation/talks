@@ -40,7 +40,7 @@
             --><div class="col-md-2 cash {{getAmountCss(trans.amount)}} text-right vertical-center">{{trans.amount | number : 2}}</div><!--
             --><div class="col-md-1 vertical-center text-center"><span class="{{getTransactionCss(trans.transactionType)}}"></span></div><!--
             --><div class="col-md-4 vertical-center text-left"><!--
-            --><span class="tag" ng-repeat="tag in trans.tags | limitTo: 3"> {{tag}}</span><!--
+            --><span class="tag" ng-repeat="tag in trans.tags track by $index | limitTo: 3"> {{tag}}</span><!--
             --></div><!--
         --></div><!--
     --></div>
