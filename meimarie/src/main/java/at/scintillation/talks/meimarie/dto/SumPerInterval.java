@@ -1,16 +1,16 @@
 package at.scintillation.talks.meimarie.dto;
 
-import org.joda.time.DateTime;
-
 /**
- * Created by admin on 14.04.2016.
+ * DTO for storing the sums for a bar chart including their interval.
+ *
+ * @author <a href="mailto:alexander.rosemann@scintillation.at">Alexander Rosemann</a>
+ * @since 1.0.0
  */
 public class SumPerInterval {
     private Long interval;
     private Double sum;
 
     public SumPerInterval() {
-
     }
 
     public SumPerInterval(Long interval, Double sum) {

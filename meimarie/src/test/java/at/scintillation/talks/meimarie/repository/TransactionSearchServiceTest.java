@@ -2,7 +2,7 @@ package at.scintillation.talks.meimarie.repository;
 
 import at.scintillation.talks.meimarie.TestConfig;
 import at.scintillation.talks.meimarie.dto.Transaction;
-import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
+import at.scintillation.talks.meimarie.service.impl.TransactionSearchServiceImpl;
 import org.elasticsearch.search.aggregations.bucket.range.Range;
 import org.elasticsearch.search.aggregations.metrics.avg.InternalAvg;
 import org.elasticsearch.search.aggregations.metrics.max.InternalMax;
@@ -36,7 +36,7 @@ public class TransactionSearchServiceTest {
     @Resource
     private TransactionRepository repo;
     @Autowired
-    private TransactionSearchService searchService;
+    private TransactionSearchServiceImpl searchService;
 
     @Before
     public void emptyData() {

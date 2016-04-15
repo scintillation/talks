@@ -5,9 +5,10 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 /**
+ * Differentiates between the transactions - wire transfers, credit card payments or withdrawals, and cash.
+ *
  * @author <a href="mailto:alexander.rosemann@scintillation.at">Alexander Rosemann</a>
  * @since 1.0.0
  */

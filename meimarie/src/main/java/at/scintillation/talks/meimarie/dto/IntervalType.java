@@ -1,7 +1,10 @@
 package at.scintillation.talks.meimarie.dto;
 
 /**
- * Created by admin on 14.04.2016.
+ * Interval for retrieving the sums of transactions for the given time period.
+ *
+ * @author <a href="mailto:alexander.rosemann@scintillation.at">Alexander Rosemann</a>
+ * @since 1.0.0
  */
 public enum IntervalType {
 

@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * The transaction - main entity in this example.
+ *
  * @author <a href="mailto:alexander.rosemann@scintillation.at">Alexander Rosemann</a>
  * @since 1.0.0
  */
