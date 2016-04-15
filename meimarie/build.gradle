@@ -46,6 +46,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
     compile('org.springframework.boot:spring-boot-devtools')
+
+    //test cases summary in scintillation-github-talks/meimarie/build/reports/tests/index.html
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path:2.2.0')
 }

@@ -1,7 +1,6 @@
 package at.scintillation.talks.meimarie.repository;
 
 import at.scintillation.talks.meimarie.dto.Transaction;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,9 +12,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface TransactionRepository extends ElasticsearchRepository<Transaction, String> {
-
-    Iterable<Transaction> findAll(Sort sort);
-
-    Iterable<Transaction> findAllByTags(String tag);
 
 }

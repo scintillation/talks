@@ -4,11 +4,6 @@ import at.scintillation.talks.meimarie.TestConfig;
 import at.scintillation.talks.meimarie.dto.Transaction;
 import at.scintillation.talks.meimarie.service.impl.TransactionSearchServiceImpl;
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
-import org.elasticsearch.search.aggregations.bucket.range.Range;
-import org.elasticsearch.search.aggregations.metrics.avg.InternalAvg;
-import org.elasticsearch.search.aggregations.metrics.max.InternalMax;
-import org.elasticsearch.search.aggregations.metrics.min.InternalMin;
-import org.elasticsearch.search.aggregations.metrics.percentiles.Percentiles;
 import org.elasticsearch.search.aggregations.metrics.sum.InternalSum;
 import org.junit.Before;
 import org.junit.Test;
@@ -57,21 +52,6 @@ public class TransactionSearchServiceImplTest {
     }
 
     @Test
-    public void testGetDescriptiveAnalysisEnhanced() {
-        TransactionRepositoryTest.addTransactionsToRepo(repo);
-        Range result = searchService.getDescriptiveAnalysisForSpendingAndWithdrawals();
-        assertThat(result.getBuckets().size(), is(2));
-        assertThat(((InternalMax) result.getBucketByKey("spending").getAggregations().get("max")).getValue(), is(-1.11));
-        assertThat(((InternalMin) result.getBucketByKey("spending").getAggregations().get("min")).getValue(), is(-128.0));
-        assertThat(((InternalAvg) result.getBucketByKey("spending").getAggregations().get("avg")).getValue(), is(-42.5275));
-        assertThat(((Percentiles) result.getBucketByKey("spending").getAggregations().get("percentiles")).percentile(50), is(-20.5));
-
-        assertThat(((InternalMax) result.getBucketByKey("withdrawal").getAggregations().get("max")).getValue(), is(21.0));
-        assertThat(((InternalMin) result.getBucketByKey("withdrawal").getAggregations().get("min")).getValue(), is(12.0));
-        assertThat(((InternalAvg) result.getBucketByKey("withdrawal").getAggregations().get("avg")).getValue(), is(15.403333333333334));
-    }
-
-    @Test
     public void testGetTransactionSumsPerInterval() {
         TransactionRepositoryTest.addTransactionsToRepo(repo);
 
@@ -96,7 +76,7 @@ public class TransactionSearchServiceImplTest {
         TransactionRepositoryTest.addTransactionsToRepo(repo);
 
         TermResult result = searchService.getTopTerms();
-        assertThat(result.getTerms().size(), is(6));
+        assertThat(result.getTerms().size(), is(5));
         assertThat(result.getTerms().get(1).getTerm(), is("alex"));
         assertThat(result.getTerms().get(1).getCount(), is(3));
         assertThat(result.getTerms().get(2).getTerm(), is("sth"));

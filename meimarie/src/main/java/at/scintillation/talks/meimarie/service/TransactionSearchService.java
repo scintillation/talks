@@ -1,12 +1,12 @@
 package at.scintillation.talks.meimarie.service;
 
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
-import org.elasticsearch.search.aggregations.bucket.range.Range;
 import org.springframework.data.elasticsearch.core.facet.result.StatisticalResult;
 import org.springframework.data.elasticsearch.core.facet.result.TermResult;
 
 /**
  * Elasticsearch specific searches on the data store.
+ *
  * @author <a href='mailto:elisabeth.rosemann@scintillation.at'>Elisabeth Rosemann</a>
  * @since 15.04.2016
  */
@@ -26,34 +26,6 @@ public interface TransactionSearchService {
      */
     //@formatter:on
     StatisticalResult getAmountDescriptiveAnalysis();
-
-    //@formatter:off
-    /**
-     * Retrieves the statistical descriptive analysis for the data (max, min, mean, median, percentiles, etc) separately
-     * for withdrawals and spendings.
-     * <pre>{
-    "query": {
-        "match_all": {}
-    },
-    "aggs" : {
-        "pos_and_neg" : {
-            "range" : {
-                "field" : "amount",
-                "keyed" : true,
-                "ranges" : [
-                    { "key" : "spending", "to" : 0 },
-                    { "key" : "withdrawal", "from" : 0 }
-                ]
-            },
-            "aggs" : {
-                "amount_stats" : { "stats" : { "field" : "amount" } }
-            }
-        }
-    }
-}</pre>
-     */
-    //@formatter:on
-    Range getDescriptiveAnalysisForSpendingAndWithdrawals();
 
     //@formatter:off
     /**

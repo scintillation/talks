@@ -8,8 +8,6 @@ import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogramBuilder;
-import org.elasticsearch.search.aggregations.bucket.range.Range;
-import org.elasticsearch.search.aggregations.bucket.range.RangeBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.FacetedPage;
@@ -50,32 +48,6 @@ public class TransactionSearchServiceImpl implements TransactionSearchService {
         FacetedPage<Transaction> result = elasticsearchTemplate.queryForPage(searchQuery, Transaction.class);
         return (StatisticalResult) result.getFacet(statsName);
     }
-
-    /**
-     * @InheritDoc
-     */
-    public Range getDescriptiveAnalysisForSpendingAndWithdrawals() {
-        String posOrNegName = "pos_or_neg";
-        RangeBuilder rangeBuilder = AggregationBuilders.range(posOrNegName)
-                .field("amount")
-                .addUnboundedFrom("withdrawal", 0)
-                .addUnboundedTo("spending", 0)
-                .subAggregation(AggregationBuilders.avg("avg").field("amount"))
-                .subAggregation(AggregationBuilders.max("max").field("amount"))
-                .subAggregation(AggregationBuilders.min("min").field("amount"))
-                .subAggregation(AggregationBuilders.count("count").field("amount"))
-                .subAggregation(AggregationBuilders.percentiles("percentiles").field("amount"));
-
-        SearchQuery searchQuery = new NativeSearchQueryBuilder()
-                .withQuery(matchAllQuery())
-                .withIndices("meimarie")
-                .addAggregation(rangeBuilder)
-                .build();
-
-        Aggregations aggregations = elasticsearchTemplate.query(searchQuery, SearchResponse::getAggregations);
-        return (Range) aggregations.get(posOrNegName);
-    }
-
 
     /**
      * @InheritDoc

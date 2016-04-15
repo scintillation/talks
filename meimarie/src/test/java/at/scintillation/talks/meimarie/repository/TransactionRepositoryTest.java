@@ -113,13 +113,4 @@ public class TransactionRepositoryTest {
         repo.save(Arrays.asList(t1, t2, t3, t4, t5, t6, t7));
     }
 
-
-    @Test
-    public void shouldFindByTags() {
-        TransactionRepositoryTest.addTransactionsToRepo(repo);
-        assertThat(Iterators.size(repo.findAllByTags("alex").iterator()), is(3));
-        assertThat(Iterators.size(repo.findAllByTags("post").iterator()), is(1));
-        assertThat(Iterators.size(repo.findAllByTags("helpme").iterator()), is(0));
-    }
-
 }
