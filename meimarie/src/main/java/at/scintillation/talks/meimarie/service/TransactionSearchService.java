@@ -77,7 +77,7 @@ public interface TransactionSearchService {
 }</pre>
      */
     //@formatter:offon
-    DateHistogram getTransactionSumsPerInterval(DateHistogram.Interval interval);
+    DateHistogram getTransactionSumsPerInterval(DateHistogram.Interval interval, boolean isSpending);
 
     //@formatter:off
     /**

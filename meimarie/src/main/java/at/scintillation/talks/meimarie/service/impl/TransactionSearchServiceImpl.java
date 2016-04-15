@@ -3,6 +3,7 @@ package at.scintillation.talks.meimarie.service.impl;
 import at.scintillation.talks.meimarie.dto.Transaction;
 import at.scintillation.talks.meimarie.service.TransactionSearchService;
 import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.index.query.RangeQueryBuilder;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
@@ -22,6 +23,7 @@ import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 
 import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
+import static org.elasticsearch.index.query.QueryBuilders.rangeQuery;
 
 /**
  * Actual implementation of {@code TransactionSearchService} accessing Elasticsearch.
@@ -78,7 +80,7 @@ public class TransactionSearchServiceImpl implements TransactionSearchService {
     /**
      * @InheritDoc
      */
-    public DateHistogram getTransactionSumsPerInterval(DateHistogram.Interval interval) {
+    public DateHistogram getTransactionSumsPerInterval(DateHistogram.Interval interval, boolean isSpending) {
 
         String transPerMonth = "transactions_per_month";
         DateHistogramBuilder dateHistogramBuilder = AggregationBuilders.dateHistogram(transPerMonth)
@@ -86,8 +88,13 @@ public class TransactionSearchServiceImpl implements TransactionSearchService {
                 .interval(interval)
                 .subAggregation(AggregationBuilders.sum("sum").field("amount"));
 
+        RangeQueryBuilder query = rangeQuery("amount").from("0");
+        if (isSpending) {
+            query = rangeQuery("amount").to("0");
+        }
+
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
-                .withQuery(matchAllQuery())
+                .withQuery(query)
                 .addAggregation(dateHistogramBuilder)
                 .build();
 
@@ -101,7 +108,7 @@ public class TransactionSearchServiceImpl implements TransactionSearchService {
      */
     public TermResult getTopTerms() {
         String tagsName = "top_tags";
-        FacetRequest facet = new TermFacetRequestBuilder(tagsName).fields("tags").size(10).build();
+        FacetRequest facet = new TermFacetRequestBuilder(tagsName).fields("tags").size(5).build();
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withQuery(matchAllQuery())
                 .withFacet(facet)

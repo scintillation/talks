@@ -84,19 +84,41 @@ public class MeiMarieServer {
         return service.getAmountDescriptiveAnalysis();
     }
 
-    /**
-     * @return the sums for the given interval
-     */
-    @RequestMapping(path = "/stats/aggregation/sums_per_interval/{interval}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @ResponseBody
-    public List<SumPerInterval> sumPerInterval(@PathVariable IntervalType interval) {
+
+    private List<SumPerInterval> getSumPerIntervals(IntervalType interval, boolean isSpending) {
         final DateHistogram.Interval dateInterval = new DateHistogram.Interval(interval.getType());
-        DateHistogram histogram = service.getTransactionSumsPerInterval(dateInterval);
+        DateHistogram histogram = service.getTransactionSumsPerInterval(dateInterval, isSpending);
         return histogram.getBuckets().stream().map(b -> {
             InternalSum internalSum = b.getAggregations().get("sum");
             final org.elasticsearch.common.joda.time.DateTime date = b.getKeyAsDate();
-            return new SumPerInterval(date.getMillis(), internalSum.getValue());
+            return new SumPerInterval(date.getMillis(), isSpending ? internalSum.getValue()*(-1) : internalSum.getValue());
         }).collect(Collectors.toList());
     }
 
+    /**
+     * @return the sums for the given interval
+     */
+    @RequestMapping(path = "/stats/aggregation/sums_per_interval/withdrawals/{interval}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public List<SumPerInterval> sumPerIntervalWithdrawals(@PathVariable IntervalType interval) {
+        return getSumPerIntervals(interval, false);
+    }
+
+    /**
+     * @return the sums for the given interval
+     */
+    @RequestMapping(path = "/stats/aggregation/sums_per_interval/spendings/{interval}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public List<SumPerInterval> sumPerIntervalSpendings(@PathVariable IntervalType interval) {
+        return getSumPerIntervals(interval, true);
+    }
+
+    /**
+     * @return the top 5 tags used
+     */
+    @RequestMapping(path = "/stats/top5", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public List<String> top5Tags() {
+        return service.getTopTerms().getTerms().stream().map(t -> String.format("%s (%d times)", t.getTerm(), t.getCount())).collect(Collectors.toList());
+    }
 }

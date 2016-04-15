@@ -16,21 +16,6 @@
 
 <div class="container">
 
-
-    <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-            <h3>Cumulative Sums over time</h3>
-
-            <a href="" ng-click="switchInterval('DAY')">day</a> |
-            <a href="" ng-click="switchInterval('WEEK')">week</a> |
-            <a href="" ng-click="switchInterval('MONTH')">month</a> |
-            <a href="" ng-click="switchInterval('YEAR')">year</a>
-
-            <canvas id="bar" class="chart chart-bar" chart-data="chartData" chart-labels="chartLabels"
-                    chart-series="chartSeries" chart-options="chartOptions"></canvas>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-md-offset-1 col-md-10">
             <h3>General Stats</h3>
@@ -52,5 +37,42 @@
             </table>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h3>Top 5 Terms</h3>
+            <p>** <span ng-repeat="item in stats.top5"> {{item}} ** </span></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h3>Cumulative Sums over time - spendings in €</h3>
+
+            <a href="" ng-click="switchInterval('DAY', 'spendings')">day</a> |
+            <a href="" ng-click="switchInterval('WEEK', 'spendings')">week</a> |
+            <a href="" ng-click="switchInterval('MONTH', 'spendings')">month</a> |
+            <a href="" ng-click="switchInterval('YEAR', 'spendings')">year</a>
+
+            <canvas id="barSpendings" class="chart chart-bar" chart-data="chartDataSpendings" chart-labels="chartLabelsSpendings"
+                    chart-series="chartSeries"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h3>Cumulative Sums over time - withdrawals in €</h3>
+
+            <a href="" ng-click="switchInterval('DAY', 'withdrawals')">day</a> |
+            <a href="" ng-click="switchInterval('WEEK', 'withdrawals')">week</a> |
+            <a href="" ng-click="switchInterval('MONTH', 'withdrawals')">month</a> |
+            <a href="" ng-click="switchInterval('YEAR', 'withdrawals')">year</a>
+
+            <canvas id="barWithdrawals" class="chart chart-bar" chart-data="chartDataWithdrawals" chart-labels="chartLabelsWithdrawals"
+                    chart-series="chartSeries"></canvas>
+        </div>
+    </div>
+
+
 
 </div>

@@ -8,6 +8,9 @@ angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate', 'char
             controller: 'statisticsController'
         }).otherwise('/transactions');
     })
+
+    // -------------------------- TRANSACTION PAGE CONTROLLER --------------------------
+
     .controller('transactionController', ['$scope', '$http', function ($scope, $http) {
 
         $scope.transactions = [];
@@ -57,40 +60,23 @@ angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate', 'char
             });
         };
 
-
         var parseDate = function (strDate) {
             var dateElements = strDate.split(".");
             var day = dateElements[0];
             var month = dateElements[1];
             return new Date(Date.UTC(2016, parseInt(month) - 1, parseInt(day)));
         };
-
-
-        //$http.get('/api/greeting', function (response) {
-        //    $scope.greetings = response.data;
-        //});
     }])
+
+    // -------------------------- STATS PAGE CONTROLLER --------------------------
+
     .controller('statisticsController', ['$scope', '$http', '$filter', function ($scope, $http, $filter) {
+        $scope.stats = {descriptive: {}};
 
-        $scope.stats = {descriptive: {}, sumsPerInterval: []};
-
-        $http.get("/api/stats/descriptive").then(function (resp) {
-            console.log("loading data...");
-            $scope.stats.descriptive = resp.data;
-            console.log(JSON.stringify($scope.stats.descriptive));
-        }, function () {
-            console.log("Failed to load transactions.");
-        });
-
-        var loadSumsPerInterval = function (interval) {
-            $http.get("/api/stats/aggregation/sums_per_interval/" + interval).then(function (resp) {
-                console.log("loading data...");
-                $scope.stats.sumsPerInterval = resp.data;
-                $scope.chartData = [new Array($scope.stats.sumsPerInterval.length)];
-                $scope.chartLabels = new Array($scope.stats.sumsPerInterval.length);
+        $scope.loadSumsPerInterval = function (interval, transType) {
+            $http.get("/api/stats/aggregation/sums_per_interval/" + transType + "/" + interval).then(function (resp) {
+                var sumsPerInterval = resp.data;
                 $scope.chartSeries = ['Sum of Transactions'];
-                $scope.chartOptions = {'scaleBeginAtZero': false};
-
                 var dateFormat = 'dd-MM-yyyy';
                 if (interval == "WEEK") {
                     dateFormat = "'KW'ww yyyy";
@@ -100,22 +86,48 @@ angular.module('meimarie', ['ngRoute', 'angular-loading-bar', 'ngAnimate', 'char
                     dateFormat = "yyyy";
                 }
 
-                for (i = 0; i <  $scope.stats.sumsPerInterval.length; i++) {
-                    var item = $scope.stats.sumsPerInterval[i];
-                    $scope.chartData[0][i] = item.sum;
-                    $scope.chartLabels[i] = $filter('date')(item.interval, dateFormat);
+                if (transType == 'spendings') {
+                    $scope.chartDataSpendings = [new Array(sumsPerInterval.length)];
+                    $scope.chartLabelsSpendings = new Array(sumsPerInterval.length);
+                    for (i = 0; i <  sumsPerInterval.length; i++) {
+                        $scope.chartDataSpendings[0][i] = sumsPerInterval[i].sum;
+                        $scope.chartLabelsSpendings[i] = $filter('date')(sumsPerInterval[i].interval, dateFormat);
+                    }
+                } else {
+                    $scope.chartDataWithdrawals = [new Array(sumsPerInterval.length)];
+                    $scope.chartLabelsWithdrawals = new Array(sumsPerInterval.length);
+                    for (i = 0; i <  sumsPerInterval.length; i++) {
+                        $scope.chartDataWithdrawals[0][i] = sumsPerInterval[i].sum;
+                        $scope.chartLabelsWithdrawals[i] = $filter('date')(sumsPerInterval[i].interval, dateFormat);
+                    }
                 }
 
-                console.log(JSON.stringify($scope.stats.sumsPerInterval));
-                console.log(JSON.stringify($scope.chartData));
-                console.log(JSON.stringify($scope.chartLabels));
+                console.log(JSON.stringify(sumsPerInterval));
             }, function () {
-                console.log("Failed to load transactions.");
+                console.log("Failed to load bar chart data for " + transType + ".");
             });
         };
-        loadSumsPerInterval("MONTH");
 
-        $scope.switchInterval = function(interval) {
-            loadSumsPerInterval(interval)
-        }
+        //init data
+        $scope.loadSumsPerInterval("MONTH", 'spendings');
+        $scope.loadSumsPerInterval("MONTH", 'withdrawals');
+
+        $scope.switchInterval = function(interval, transType) {
+            $scope.loadSumsPerInterval(interval, transType);
+        };
+
+        $http.get("/api/stats/descriptive").then(function (resp) {
+            $scope.stats.descriptive = resp.data;
+            console.log(JSON.stringify($scope.stats.descriptive));
+        }, function () {
+            console.log("Failed to get the descriptive analysis.");
+        });
+
+        $http.get("/api/stats/top5").then(function (resp) {
+            $scope.stats.top5 = resp.data;
+            console.log(JSON.stringify($scope.stats.top5));
+        }, function () {
+            console.log("Failed to get the top 5 elements.");
+        });
+
     }]);

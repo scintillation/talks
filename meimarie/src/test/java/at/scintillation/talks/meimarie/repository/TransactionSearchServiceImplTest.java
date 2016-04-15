@@ -3,11 +3,13 @@ package at.scintillation.talks.meimarie.repository;
 import at.scintillation.talks.meimarie.TestConfig;
 import at.scintillation.talks.meimarie.dto.Transaction;
 import at.scintillation.talks.meimarie.service.impl.TransactionSearchServiceImpl;
+import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
 import org.elasticsearch.search.aggregations.bucket.range.Range;
 import org.elasticsearch.search.aggregations.metrics.avg.InternalAvg;
 import org.elasticsearch.search.aggregations.metrics.max.InternalMax;
 import org.elasticsearch.search.aggregations.metrics.min.InternalMin;
 import org.elasticsearch.search.aggregations.metrics.percentiles.Percentiles;
+import org.elasticsearch.search.aggregations.metrics.sum.InternalSum;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,7 +31,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = TestConfig.class)
-public class TransactionSearchServiceTest {
+public class TransactionSearchServiceImplTest {
 
     @Autowired
     private ElasticsearchOperations operations;
@@ -59,39 +61,33 @@ public class TransactionSearchServiceTest {
         TransactionRepositoryTest.addTransactionsToRepo(repo);
         Range result = searchService.getDescriptiveAnalysisForSpendingAndWithdrawals();
         assertThat(result.getBuckets().size(), is(2));
-        assertThat(((InternalMax)result.getBucketByKey("spending").getAggregations().get("max")).getValue(), is(-1.11));
-        assertThat(((InternalMin)result.getBucketByKey("spending").getAggregations().get("min")).getValue(), is(-128.0));
-        assertThat(((InternalAvg)result.getBucketByKey("spending").getAggregations().get("avg")).getValue(), is(-42.5275));
-        assertThat(((Percentiles)result.getBucketByKey("spending").getAggregations().get("percentiles")).percentile(50), is(-20.5));
+        assertThat(((InternalMax) result.getBucketByKey("spending").getAggregations().get("max")).getValue(), is(-1.11));
+        assertThat(((InternalMin) result.getBucketByKey("spending").getAggregations().get("min")).getValue(), is(-128.0));
+        assertThat(((InternalAvg) result.getBucketByKey("spending").getAggregations().get("avg")).getValue(), is(-42.5275));
+        assertThat(((Percentiles) result.getBucketByKey("spending").getAggregations().get("percentiles")).percentile(50), is(-20.5));
 
-        assertThat(((InternalMax)result.getBucketByKey("withdrawal").getAggregations().get("max")).getValue(), is(21.0));
-        assertThat(((InternalMin)result.getBucketByKey("withdrawal").getAggregations().get("min")).getValue(), is(12.0));
-        assertThat(((InternalAvg)result.getBucketByKey("withdrawal").getAggregations().get("avg")).getValue(), is(15.403333333333334));
+        assertThat(((InternalMax) result.getBucketByKey("withdrawal").getAggregations().get("max")).getValue(), is(21.0));
+        assertThat(((InternalMin) result.getBucketByKey("withdrawal").getAggregations().get("min")).getValue(), is(12.0));
+        assertThat(((InternalAvg) result.getBucketByKey("withdrawal").getAggregations().get("avg")).getValue(), is(15.403333333333334));
     }
 
     @Test
-    public void testGetSumsBy() {
+    public void testGetTransactionSumsPerInterval() {
         TransactionRepositoryTest.addTransactionsToRepo(repo);
 
-//        DateHistogram result = searchService.getTransactionSumsPerDay();
-//        assertThat(result.getBuckets().size(), is(3));
+        //spendings
+        DateHistogram result = searchService.getTransactionSumsPerInterval(DateHistogram.Interval.DAY, true);
+        assertThat(result.getBuckets().size(), is(3));
+        assertThat(((InternalSum) result.getBuckets().get(0).getAggregations().get("sum")).getValue(), is(-129.11));
+        assertThat(((InternalSum) result.getBuckets().get(1).getAggregations().get("sum")).getValue(), is(-21.0));
+        assertThat(((InternalSum) result.getBuckets().get(2).getAggregations().get("sum")).getValue(), is(-20.0));
 
-        //not working
-
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2013-10-31T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-115.9));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2015-10-31T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-9));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2015-11-27T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(1));
-//
-//        result = searchService.getTransactionSumsPerMonth();
-//        assertThat(result.getBuckets().size(), is(3));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2013-10-01T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-1.11));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2015-10-01T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-1.11));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2015-11-01T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-1.11));
-//
-//        result = searchService.getTransactionSumsPerYear();
-//        assertThat(result.getBuckets().size(), is(2));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2013-01-01T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-1.11));
-//        assertThat(((InternalSum)result.getBucketByKey(TransactionSearchService.getDateAsLong("2015-01-01T00:00:00.000Z")).getAggregations().get("sum")).getValue(), is(-1.11));
+        //withdrawals
+        result = searchService.getTransactionSumsPerInterval(DateHistogram.Interval.DAY, false);
+        assertThat(result.getBuckets().size(), is(3));
+        assertThat(((InternalSum) result.getBuckets().get(0).getAggregations().get("sum")).getValue(), is(13.21));
+        assertThat(((InternalSum) result.getBuckets().get(1).getAggregations().get("sum")).getValue(), is(12.0));
+        assertThat(((InternalSum) result.getBuckets().get(2).getAggregations().get("sum")).getValue(), is(21.0));
     }
 
 
@@ -105,7 +101,7 @@ public class TransactionSearchServiceTest {
         assertThat(result.getTerms().get(1).getCount(), is(3));
         assertThat(result.getTerms().get(2).getTerm(), is("sth"));
         assertThat(result.getTerms().get(2).getCount(), is(2));
-   }
+    }
 
 
 }
