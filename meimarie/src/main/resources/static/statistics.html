@@ -16,16 +16,10 @@
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-md-5">
-            Count: {{stats.descriptive.count}}<br/>
-            Min.: {{stats.descriptive.min}}<br/>
-            Max.: {{stats.descriptive.max}}<br/>
-            Mean: {{stats.descriptive.mean}}<br/>
-            Total: {{stats.descriptive.count}}
-        </div>
 
-        <div class="col-md-offset-1 col-md-5">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h3>Cumulative Sums over time</h3>
 
             <a href="" ng-click="switchInterval('DAY')">day</a> |
             <a href="" ng-click="switchInterval('WEEK')">week</a> |
@@ -36,10 +30,29 @@
                 {{item.interval}}: {{item.sum}}
             </div>
 
-
-
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h3>General Stats</h3>
+            <table class="table">
+                <tr>
+                    <th>Number of transactions</th>
+                    <th>Minimum (highest spending)</th>
+                    <th>Maximum (highest withdrawal)</th>
+                    <th>Mean</th>
+                    <th>Overall sum</th>
+                </tr>
+                <tr>
+                    <td>{{stats.descriptive.count}}</td>
+                    <td>{{stats.descriptive.min}} €</td>
+                    <td>{{stats.descriptive.max}} €</td>
+                    <td>{{stats.descriptive.mean}} €</td>
+                    <td>{{stats.descriptive.total}} €</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
 </div>
