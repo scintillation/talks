@@ -30,7 +30,7 @@ public class TransactionSearchServiceImplTest {
 
     @Autowired
     private ElasticsearchOperations operations;
-    @Resource
+    @Autowired
     private TransactionRepository repo;
     @Autowired
     private TransactionSearchServiceImpl searchService;

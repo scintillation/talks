@@ -34,7 +34,7 @@ public class TransactionRepositoryTest {
 
     @Autowired
     private ElasticsearchOperations operations;
-    @Resource
+    @Autowired
     private TransactionRepository repo;
 
     @Before
