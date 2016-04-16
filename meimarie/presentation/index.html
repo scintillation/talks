@@ -134,18 +134,18 @@ sudo apt-get install oracle-java8-installer
         <div class="step" data-x="6000" data-y="1000">
             <div class="row text-center">
                 <h1>Microsoft Azure Setup</h1>
-                <h3>Elasticsearch 2.3.0</h3>
-<pre>wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.0/elasticsearch-2.3.0.tar.gz
-tar xfv elasticsearch-2.3.0.tar.gz
-chmod +x elasticsearch-2.3.0/bin/elasticsearch</pre>
-<pre>nohup ./elasticsearch-2.3.0/bin/elasticsearch -Des.network.host=10.0.0.4 &</pre>
+                <h3>Elasticsearch 1.5.2</h3>
+<pre>wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/1.5.2/elasticsearch-1.5.2.tar.gz
+tar xfv elasticsearch-1.5.2.tar.gz
+chmod +x elasticsearch-1.5.2/bin/elasticsearch</pre>
+<pre>nohup ./elasticsearch-1.5.2/bin/elasticsearch -Des.network.host=10.0.0.4 &</pre>
             </div>
             <p>Verify: <code>curl -XGET 'http://40.68.45.121:9200'</code></p>
         </div>
 
         <!-- Notes:
         Change Xmx for ES:
-        vim elasticsearch-2.3.0/bin/elasticsearch.in.sh
+        vim elasticsearch-1.5.2/bin/elasticsearch.in.sh
         Xmx=512m
 
         Make sure you have an Inbound Security Rule in "Network security groups" for the ports 9200
